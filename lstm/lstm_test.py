@@ -56,19 +56,11 @@ def create_dictionaries(model=None,
 def loadStopWords():   
     
     stop = [line.strip()  for line in open('../data/stopWords.txt', 'r', encoding='utf-8').readlines() ]   
-    #print("type(loadStopWords_stop)",type(stop))
+    
     return stop  
 
 def input_transform(string):
     words=jieba.lcut(string)
-    '''
-    stopWords = loadStopWords()
-    leftWords = []   
-    for i in words: 
-        if (i not in stopWords):  
-            leftWords.append(i)
-    text_str = ' '.join(leftWords)
-    '''
     words=np.array(words).reshape(1,-1)
     #载入模型
     model=Word2Vec.load('../model/Word2vec_model.pkl')

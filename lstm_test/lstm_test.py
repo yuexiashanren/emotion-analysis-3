@@ -1,6 +1,7 @@
 #! /bin/env python
 # -*- coding: utf-8 -*-
 """
+添加停用词典
 预测
 """
 import jieba
@@ -61,15 +62,18 @@ def loadStopWords():
 
 def input_transform(string):
     words=jieba.lcut(string)
-    '''
+    #print("words",words)
+    
     stopWords = loadStopWords()
-    leftWords = []   
-    for i in words: 
-        if (i not in stopWords):  
+    leftWords = []
+    for i in words:
+        if(i not in stopWords):
             leftWords.append(i)
-    text_str = ' '.join(leftWords)
-    '''
-    words=np.array(words).reshape(1,-1)
+    text_str = leftWords
+    #print("text_str",text_str)
+    
+    words=np.array(text_str).reshape(1,-1)
+    #print("words1",words)
     #载入模型
     model=Word2Vec.load('./Word2vec_model.pkl')
     _,_,combined=create_dictionaries(model,words)
