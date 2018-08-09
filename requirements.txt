@@ -1,0 +1,9 @@
+Keras==1.1.1
+gensim==0.13.3
+jieba==0.38
+sklearn==0.0
+
+
+https://github.com/Edward1Chou/SentimentAnalysis
+
+https://www.jianshu.com/p/158c3f02a15b
