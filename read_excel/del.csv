@@ -1,0 +1,179 @@
+心得体会
+1.21212121212121e+104
+2.12121221212211e+103
+1.11111111111111e+101
+1.11111111111111e+101
+http://www.whutyiban.com/list/new/xy/jisuanjixueyuan/2017-11-21/2609.htmlhttp://www.whutyiban.com/list/new/xy/jisuanjixueyuan/2017-11-21/2625.htmlhttp://www.whutyiban.com/list/new/xy/jisuanjixueyuan/2017-11-21/2609.html
+emmm，buy self-learning ,I feel it is a little difficult ,maybe I have no idea about "chengxushejiyuyan",from The flolowing classes ,I will listen carefully to find it's easy.
+4.11111111111111e+102
+1.11111111111111e+103
+#include<stdio.h> int main (void) { int i,m,n; for (m=2;m<=1000;m++) { n=0; for (i=1;i<=m/2;i++) if(m%i==0) n=n+i; if (n==m) printf("%d\n",m); } return 0; }
+1.11111111111111e+101
+hahahahahahahahahdjfhlsdjkahfldkjfhaiweufhjklwehlavkjhdslkjvahlkfuhnsdkjafhsdkjafhlekawhlkedbhafklwjhfdlkjshfldkjahskldj
+心得体会
+本次學習讓我更清楚的對計算機軟件硬件有了認識，也對其中一些專業知識更瞭解，更深入的明白了計算機科學的內涵，同時通過學習更好的激發了計算機科學學習的興趣，明確了計算機科學的學習方法，並對計算機科學的未來有了更好的認識。
+After the teacher, don't read in a hurry to do my homework, and should be closed his eyes, relax after lifting, had been the important content of the lectures like show the aftertaste again, print the content of the teacher really in your mind.
+1.11111111111111e+137
+1.11111111111111e+101
+1.24354687216464e+103
+1.11111111111111e+101
+#include<stdio.h> int main (void) { int a,b,count=0; int c[10000]; for (a=0;a<10000;a++) c[a]=a+1; c[0]=0; for(a=1;a<10000;a++) for(b=a+1;b<10000;b++) if(c[b]!=0) if(c[b]%c[a]==0) c[b]=0; for(a=1;a<10000;a++) { if(c[a]!=0){ printf("%d,",c[a]); count++; if(count%10==0) printf("/n");} } return 0; }
+不行不行那些你手机那些那些年继续继续奖学金那些那些年想就地解决打击打击你等你那些奖学金继续继续姐姐学习快开学苦中苦简单机械就地解决6666666666664646466464646464466464646646
+1.11111111111111e+108
+心得体会心得体会心得体会心得体会得心得体会心得体会心得体会心得体会心得体会心得体会得心得体会心得体会心得体会心得体会心得体会心得体会心心得体会心得体会心得体会心得体会得心得体会心得体会心得体会心得体会心得体会心得体会得心得体会心得体会心得体会心得体会心得体会心得体会心心得体会心体会心体会心体会心
+1.11111111111111e+103
+After a week of studying, I found that computer introduction was really a magical subject.Hope to learn computer introduction.
+激发兴趣，对于专业课的 一开始，我准备不 学习起到重要作用。 足。课前预习不充分，以 而与之最密切相关为老师的教学方法会和 的就是C++。说句心里话，以前的一样，只准备好了 之前我是一点点c++的概“听课”，没有思考，没 念都没有，所以刚开始接有参与讨论。 触时我非常的不知所以
+题目很好的结合了课堂所上的知识，印象很深刻关于哈佛大学的解释感觉对重点和细节未来学科的学习规划有了初步认识，We like to say that CS teaches you how to think more methodically and how to solve problems more effectively.  As such, its lessons are applicable well beyond the boundaries of CS itself. But CS is also, more generally, the study of information. How do you represent it? With what methods (aka algorithms) can you process it? Perhaps the most liberal answer, though, is that CS “has no exclusive domain of its own, and that its importance comes from the problems to which it is applied.”
+hsjsnxbbxbjsjnansznsbxjsndndjdksiwiufhdhrueueooeidjhxbdjsoowodjdjjdjsjjsksoiejdjdjshjsjdjdjeijdjdjsjdjdkskd
+听了老师的指引，我去了解了一下计算机学科学术界和业界的信息。知道了目前中国计算机科学最强的大学是清华大学，并从参加ACM大赛的学长了解到，目前我校与清华大学的计算机学科的学生的差距。与此同时我也上了微软bing搜索，去查找关于computing science的信息。以下是我搜到的信息 Computer science is the study of the theory, experimentation, and engineering that form the basis for the design and use ofcomputers. It is the scientific and practical approach to computation and its applications and the systematic study of the feasibility, structure, expression, and mechanization of the methodical procedures (or algorithms) that underlie the acquisition, representation, processing, storage, communication of, and access to information. An alternate, more succinct definition of computer science is the study of automating algorithmic processes that scale. A computer scientist specializes in the theory of computation and the design of computational systems.[1] Its fields can be divided into a variety of theoretical and practical disciplines. Some fields, such as computational complexity theory (which explores the fundamental properties of computational and intractable problems), are highly abstract, while fields such as computer graphics emphasize real-world visual applications. Other fields still focus on challenges in implementing computation. For example, programming language theory considers various approaches to the description of computation, while the study of computer programming itself investigates various aspects of the use of programming languageand complex systems. Human–computer interaction considers the challenges in making computers and computations useful, usable, and universally accessible to humans.
+总结
+during this weekend ,when I looking back ,I found that I have learned a lot of things ,mayby I am a student ,who know nothing before I go to university ,I am really feel a little happy ,also ,I will meet my winter holiday soon make me surprised,how soon time flies ...
+This chapter explains about the trend of computer development; high performance, networking and intelligence. Based on the definition of high performance, the status quo of high performance computer research and the prospect of its future development are analyzed.
+emmmmm
+After a week of studying, I found that computer introduction was really a magical subject.This week we went into chapter 2, and the computer system is a brand new field for us.Hope to learn computer introduction.
+After a week of studying, I found that computer introduction was really a magical subject.This week we went into chapter 2, and the computer system is a brand new field for us.Hope to learn computer introduction.
+心得体会
+1.11111111111111e+99
+.........................................................................................................
+Introduction to 计算机。at first it was difficult but then Laoshi explain and I understand.............................
+.................. ...................................................................................
+1.11111111111111e+122
+0.0
+1.11111111111111e+102
+1111111111ydkhxkyytsufa5ditsrido5s8tzyls9doyditsohx96dohxithx69soyxoysottxhlx96dyofi5dpudoycludhhctdoydotdlu
+1.11111111111111e+129
+废话好多记得记得就和。。。。。。。。。。。。。。。。。。。。。。。。。。。。{u额U盾家电家具店结局eudjcjcjcjjcjvkjkcjvjdkcjovjvajjzjxjcn.vndjcjdjfiifj}
+needed得得得11111221313188151518818181881818188181818818181891818189181818188181891916431994575194637818436484516945+691843+619575186731849912+818466789467355
+1.11111111111111e+106
+1.11111111111111e+102
+1.11111111111111e+108
+1.11111111111111e+101
+1.11111111111111e+252
+1.11111111111111e+167
+1.11111111111111e+159
+Stray Birds Stray birds of summer come to my window to sing and fly away.And yellow leaves of autumn, which have no songs,  flutter and fall there with a sigh. 2)If you shed tears when you miss the sun,  you also miss the stars. 3)Man is a born child,  his power is the power of growth. 4)The trees come up to my window  like the yearning voice of the dumb earth. 5)You smiled and talked to me of nothing  and I felt that for this I had been waiting long. 6)The fish in the water is silent,  the animal on the earth is noisy,  the bird in the air is singing. But Man has in him the silence of the sea,  the noise of the earth  and the music of the air. 7)The world rushes on over the strings of the lingering heart making the music of sadness. 8)We come nearest to the great  when we are great in humility. 9)The mist, like love,  plays upon the heart of the hills  and brings out surprises of beauty. 10)Your voice, my friend, wanders in my heart,  like the muffled sound of the sea  among these listening pines. 11)What is this unseen flame of darkness  whose sparks are the stars? 12)Let life be beautiful like summer flowers  and death like autumn leaves. 13)The touch of the nameless days clings to my heart  like mosses round the old tree.
+11114111111112524分钟523535353535396498391739137513751673153751363555434646464667696464646466446467676466464
+1.11111111111111e+139
+288888383388335867638383838668386838383738383866838838668638u合成词哦吃吃吃佛吃一崔付粗粗粗粗飞机场粗3人3如果囧积极粗粗次次次额才惊觉u粗赶快v
+1.11111111111111e+101
+1.11111111111111e+102
+1.11111111111111e+101
+1122333344445566677889997656789965568999877778999））/_（）==/（_）/=ghcvhhgvhjj chbvfhh445567777 56667775446
+11111111111111111111111111111111111111617262）yvybibiebixbrixbrixnirxnononexoenxoenxonrnctonctocntoncorncienxinxornxorcnorncotncotnconrcieixbiwbziqbziwnxoexenxiebxibrixnroncoenxiwbizbownonelmornocenxiwnxienxorjcornxoneoxrxiebxienxonrcontvubeubxiebixneonxonzownonxienixnornocntoncronownxibirciebxinrf
+1.11111111111111e+99
+1.11111111111111e+182
+1.11111111111111e+107
+1.11111111212121e+104
+1.11111111111111e+105
+1.21212121212121e+110
+1.11111111111111e+101
+1.11111111111111e+103
+1.11111111111111e+147
+1.11111111111155e+103
+1.11111111111111e+99
+1.11111111111111e+100
+1.11111111111111e+105
+1.11222333444555e+99
+1.11111111111111e+101
+1.11111111111111e+100
+1.11111111111111e+121
+1.11111111111111e+101
+1.11546494946464e+103
+1.11111142424376e+110
+1.11111111111111e+170
+1.11111111111111e+112
+1.11111111111111e+106
+4.38913791379179e+156
+11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+1.54843499464979e+106
+1.22637273828462e+51
+..................................................................................................................................................................
+1.11111111111111e+103
+1.11111111111111e+101
+1.11111111111111e+105
+1.11111111111111e+204
+1.11111111111111e+175
+1.11111111111111e+103
+cjgchjbjhfhnbhjkhgcfghhvghjjhvhjbhhjnvgjggjnbhhfghjncdfghhbccghnvghhchhbghjbhknhjjbjkbhjjggrfhknghjgkvj
+11111111111111111111111111。 1111111111111111111111111111111111111111111111111111111111111111111111111111
+1.11111111111111e+182
+4.44428234384646e+104
+1.11111114144111e+100
+1.11111111111111e+175
+0.0
+1.11111111111111e+103
+1.11111111111111e+99
+轻轻巧巧轻轻巧巧东方v刚刚vvtggghggggggggggggggghhhhhhhhhhterggggggggggggghhhhhhhhhhhhhhhhggghggggghhhhhhhhhhhhhhhhd
+gvrhhvghjmhgvfcbjngfbkkbfcvjnbvccfgjhbgjbfvnjjgfggfghjjygfdccgbjhdcvhbfhvxvbjvvbbnnfcvhbbccdchhbvdcbjgvvb
+1.11111111111111e+101
+it has the most users，the most adapter software and ecological.After a generation of revisions, it USES and accounts for half of the operating system market。
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+111111111111111111111111111111111111，我11们1的地图111111需要等级的改变，11111，我11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111，我们的生活11111方式的转变，我们的生活方式，我们的生活方式，你的生活方式。我们自己都不是因为有你陪伴了我们都
+111111111111111111111111111115576764646496464643437649463464643434646766464646464 44679434994 7646464664646464
+9.99999999999999e+105
+5.37434355553355e+153
+1.11111111111111e+99
+1.11111111111111e+101
+1.11111111111111e+107
+1.11111111111111e+154
+hjhfugkooollbjkbsksksossbhdldbsjsososossodvdbodkdjdbdidvdjdvdjvdkdndbdkdvdoejpsbsjshsbeosnspznxxbxkndjdkdbdjekejhdidbdlalqmaksnxhxnoznsoasiabsjzbxhxbdodmdpamqkansosndbdkdnosndsnosnsiddidlspsnsnzodnepmslamsjsnsosndooxkdnsks
+#include<stdio.h> int main (void) {int blank,digit,other; char ch; blank=digit=other=0; printf("Enter characters："); while (getchar()!='\n') {ch=getchar(); switch (ch){ case ' ': case'\n': blank++; break; case'0':case'1':case'2':case'3':case'4': case'5':case'6':case'7':case'8':case'9': digit++; break; default: break;}} printf("blank=%d,digit=%d,other=%d \n",blank,digit,other); return 0; }
+111111111111111111111111111 6666666666666666666666666666666666666666666666666666666666666666666666666666
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+1.11111111111111e+103
+新华社北京１１月１１日电 眼下立冬已过，北方各地相继进入供暖季。为了让百姓过个更舒适的冬天，许多城市提前了供暖时间。与此同时，为了整治雾霾，一系列以“煤改气”“限能耗”“严控车”为重点的环境治污行动正在各地加快推进。多管齐下的目标，正是为了百姓温暖的居所和干净的空气。 党的十八大以来，党中央、国务院坚持发展和民生优先的方针，从人民群众最关心、最直接的医疗、教育、户籍、社会保障等问题入手，加大民生改善，着力攻坚克难，基本民生保障安全网正不断织就织密。 努力实现“学有所教、劳有所得、病有所医、老有所养、住有所居”，一项项举措回应着民生关切 “我们的人民热爱生活，期盼有更好的教育、更稳定的工作、更满意的收入、更可靠的社会保障、更高水平的医疗卫生服务、更舒适的居住条件、更优美的环境，期盼孩子们能成长得更好、工作得更好、生活得更好。” 党的十八届一中全会后的中外记者见面会上，习近平总书记用深情的话语展现了新一届中央领导集体的“民生情怀”。 加快解决民生难题、早日补齐民生短板，既是广大群众的热切期盼，也是党和政府工作的重点。透过国务院常务会议这扇窗，不难发现，民生议题如此集中。一年来，从住房、医疗、教育，到物价、就业、社保等，只要是群众关心的焦点问题，就会成为政府工作部署和解决重点。 “早就盼着拆迁了！”７１岁的韩嘉瑶老人站在狭窄的院子里说，住在北梁有“三怕”：一怕下大雨淹了自家的小窝；二怕冬天结冰路难走，三怕上厕所。老人住的北梁位于包头市东河区，是内蒙古自治区最大的城市棚户区。 根据党中央、国务院部署，在过去５年改造各类棚户区１２６０万户基础上，２０１３年至２０１７年将再改造各类棚户区１０００万户，重点是中西部地区、资源枯竭型城市及独立工矿棚户区、三线企业集中地区的棚户区。 在住房城乡建设部住房保障司副司长张学勤看来，这三类棚户区改造都是“难啃的硬骨头”。 像棚户区改造这样的“硬骨头”民生攻坚战，正在各个领域展开——积极推进县级医院综合改革，巩固完善基本药物制度和基层运行新机制，推进廉租房、公租房并轨运行，推进公司注册资本登记制度改革，降低创业门槛等。 改善民生离不开真金白银的投入。今年以来，财政收入增速放缓，钱从哪里来？ 一方面优化财政支出结构，另一方面“挖”钱，盘活存量。中央出台八项规定，遏制公款消费；国务院提出本届政府任期内，政府性的楼堂馆所一律不得新建，要求中央国家机关各部门对２０１３年一般性支出统一按５％比例压减。 同时，一笔笔真金白银按时拨付民生工程——９８７．７亿元用于城乡低保补助。２２．６亿元用于保障５７．４万名孤儿和艾滋病病毒感染儿童基本生活。５亿元中央财政疾病应急救助补助资金，用于身份不明确或无负担能力患者发生的急救费用补助。２２１．５２亿元支持农村危房改造补助…… 一个个数据组成了本届政府民生工作的初步答卷：１至９月城镇新增就业人数１０６６万人，超出预期１６６万人；截至９月底全国新开工城镇保障性安居工程６２０万套，基本建成４１０万套，分别达到年度目标任务的９８％和８７％；到８月底城乡居民大病保险制度已在２３个省份的９４个统筹地区开始试点，覆盖城乡居民２．１亿；物价上升水平温和可控，可以完成全年３．５％的调控目标。 彰显民生特色的政策措施，犹如冬日阳光，温暖着百姓生活。 “兜住底”“补短板”，解决最基本、最迫切民生问题 每年７至９月，都是繁忙的就业季。今年，高达６９９万的高校毕业生总量更是前所未有。今年７月，大连市进一步完善相关政策措施，充分利用基层劳动保障平台帮助来自零就业家庭、城镇低保家庭和残疾人家庭等困难毕业生实现１００％的“兜底”就业。 民生之本乃就业。这种“兜底”就业的措施在越来越多的地方出台并完善，社区里、高校中，涌现越来越多的就业帮扶平台。在今年经济增速放缓、就业形势严峻的背景下，国家出台了包括减免小企业税收、开发公益性岗位等一系列有力措施，优先对困难群体进行就业扶持。 “社会政策要托底”“构建相互衔接、运行有效、保障特困群众的兜底制度”“着力解决民生领域突出问题”……党的十八大以来，在党中央、国务院的一系列政策措施中，都在强调这一民生思路。 “每年财政对民生的支出都是刚性增长，在保障民生方面政府要做的是保障基本。”财政部财科所副所长白景明说，“首要任务就是要由政府兜住底线，让社保安全网实现全覆盖，满足人民群众最基本的生活需求，然后再提高标准。” 解广大群众燃眉之急，为困难群体雪中送炭。与老百姓紧密相关的“心头”事中，哪些是要尽快解决的、哪些是必须全力保障的，也就是党和政府优先要做的事。教育、医疗、社保、社会救助等在内的一张基本民生保障安全网正在不断织密，这不仅是提升人民群众对政府满意度的必由之径，也是让改革发展成果惠及全体人民的重要体现。 空气、水、土壤、食品安全等，是人民群众最基本的生存需求，也是最基本的民生关切。多年来经济发展与环境保护的失衡让这些问题一度被忽视，如今成为政府正在全力补上的民生“短板”。 ５月，国务院常务会议研究部署进一步加强婴幼儿奶粉质量安全工作，要求全社会都要本着对下一代高度负责的态度，为少年儿童的健康成长创造良好环境。让孩子喝上“放心奶”上升为一项国家行为。 今年以来，国家以食品药品安全标准体系、监测体系、生产流通全过程可追溯体系、市场准入制度、召回制度、诚信体系等为重点，建立覆盖各环节、最严格的食品药品安全监管制度；在环境保护方面，实施多污染物协同控制，强化多污染源综合治理。 “要围绕老百姓反映强烈的民生问题，在与群众利益密切相关的社会保障和收入分配、社会事业、食品药品安全、环境保护、城乡统筹发展等领域加快改革，补上短板。”国家发展改革委主任徐绍史说。 用改革的办法完善公共服务体系，从制度上为所有人创造公平发展机会 １０月２８日，国务院常务会议要求推进公司注册资本登记制度改革，并出台一系列政策措施，放宽了注册资本登记和市场主体住所（经营场所）登记条件，为民间投资创业去除了“门槛”。 “激发市场主体发展新活力是深化改革的重要目的。改革提高了登记效率，激活了社会创业热情。”国家工商总局局长张茅说。 民生保障安全网同样需要用改革的办法织牢。 ８月，在四川内江市东兴区杨家镇王家庵村，村民周立新第一次以农民身份办理了企业职工养老保险。“以前由于户籍限制，只能参加新型农村养老保险，比现在差很多。”周立新说。内江市的很多农民都受益于这个打破了户籍壁垒，城乡统筹的养老保险方案。 在基本民生保障制度改革方面，国家正积极有效地整体推进城乡居民大病保险，整合城乡基本医疗保险管理职能，逐步统一城乡居民基本医疗保险制度，健全全民医保体系，健全保障性住房分配制度，有序推进公租房、廉租房并轨，地级以上城市将农民工纳入保障房范围。 民生的改善，就需要通过改革在完善体制机制上下工夫，创造权利公平、机会公平、规则公平的社会环境。这同样是十八大以来党和政府工作的着力点。 今年高考后，全国约３万名特困地区的考生通过“特殊通道”进入了重点高校学习，让更多勤奋好学的农村孩子看到更多的希望。此外，国家还确定在全国高校招生计划中专门安排１８．５万个名额，由东部高校招收中西部考生。 在养老方面，今年国务院出台了关于加快发展养老服务业的若干意见，提出要通过简政放权，创新体制机制，激发社会活力，逐步使社会力量成为发展养老服务业的主体。中国老龄科学研究中心副主任党俊武表示，这正是从顶层设计上积极应对老龄化的突出表现。 此外，在就业方面，国家要求完善公务员招考和事业单位公开招聘制度，加强国有企业招聘活动监管，大力营造公平的就业环境。 以经济发展改善民生，以改革创新保障民生，以社会进步创造美好生活。人们相信，随着我国综合国力的不断增强，民生问题将在更高层次上得以解决，越来越多的群众将能更好地分享经济社会发展的成果
+1111111211115365646564975456564645454545454545424542424242424242454686865656565646534658686867676757576525688576727676757575757575757576857675758686757889776868686868686868676868686868686860589868989868686868653135576864689865653535686886068986868689 1111111211115365646564975456564645454545454545424542424242424242454686865656565646534658686867676757576525688576727676757575757575757576857675758686757889776868686868686868676868686868686860589868989868686868653135576864689865653535686886068986868689 1111111211115365646564975456564645454545454545424542424242424242454686865656565646534658686867676757576525688576727676757575757575757576857675758686757889776868686868686868676868686868686860589868989868686868653135576864689865653535686886068986868689 1111111211115365646564975456564645454545454545424542424242424242454686865656565646534658686867676757576525688576727676757575757575757576857675758686757889776868686868686868676868686868686860589868989868686868653135576864689865653535686886068986868689 1111111211115365646564975456564645454545454545424542424242424242454686865656565646534658686867676757576525688576727676757575757575757576857675758686757889776868686868686868676868686868686860589868989868686868653135576864689865653535686886068986868689 1111111211115365646564975456564645454545454545424542424242424242454686865656565646534658686867676757576525688576727676757575757575757576857675758686757889776868686868686868676868686868686860589868989868686868653135576864689865653535686886068986868689 1111111211115365646564975456564645454545454545424542424242424242454686865656565646534658686867676757576525688576727676757575757575757576857675758686757889776868686868686868676868686868686860589868989868686868653135576864689865653535686886068986868689 1111111211115365646564975456564645454545454545424542424242424242454686865656565646534658686867676757576525688576727676757575757575757576857675758686757889776868686868686868676868686868686860589868989868686868653135576864689865653535686886068986868689 1111111211115365646564975456564645454545454545424542424242424242454686865656565646534658686867676757576525688576727676757575757575757576857675758686757889776868686868686868676868686868686860589868989868686868653135576864689865653535686886068986868689 1111111211115365646564975456564645454545454545424542424242424242454686865656565646534658686867676757576525688576727676757575757575757576857675758686757889776868686868686868676868686868686860589868989868686868653135576864689865653535686886068986868689
+111111dhdjsjxbcjxjznsjwjsjssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+1.11111111111111e+139
+1.11111111246496e+154
+111111111111111111111111111111111111111111111111111111121212121212121212312616249546246246246246432426462432432434624624624624624324324624624624624624624564624624624231261321234621676546162762124621676246246276516213213213432132123162126162462462112643242372642313271.212346427624214.24264424657654242676542624957597
+1.11111111111111e+127
+，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，。。。。。。。，。，，，，，。。，，，，，。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。，，，。，，。。。。。，，1？，1？，1？，？，？，？。？。？。？。？。。？，。？，？，？。？。。！。！。！。！。？。！。！。！。！。！。！。！。！。！。！。！。！。！。！。！。！。！。！。！。！。！。！。！。！。！
+111111111111111111111111111111114455555556336558888555114452547885536652555225555535555553552154455555551144772558366988144755558566322244855662147785544/45445624::-4555877788552111225587756333558555565522114488866332247889663255477115555
+\eeddddcxccccvvvggikkkllklglfkkfkflkfkfkkfkfkfkfkfkfkfklflfloror ddddddddkkllllllkdmdmmsjakkwkskkskkskskk
+111142775.875775
+1.11111111111111e+151
+1.11111111111111e+126
+2.65656265656656e+175
+1.11111111111111e+99
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111112122121221212121221212121212121212212121221212121221212212121212212121221212212121212212121212212121221212121212212121212122121221212121212212141111111121212111111
+1.11111111111111e+203
+这次实验测试都是以前做过的题目hwbsbsjehebdbhdhdbdbdhdhdhdbdbdbdhdhbdhdhjbdbdbdhdhdhdhdhehebebdbdbdbdbdbdbbdhdhdhdhdhehejtfjhrhrhrhrhrhjbrhrhrbrbrhrbrhrbrbrhrjdjkdjdnnrhdjbdhrfrbbrfnnbbdbdbbdbdbdndndbdbhxjdnsnsndhdjnrjdnndjdndjdjdndjjdndjdjdjrnfhdhdndjnfhfhjbrjrhrjrjrnfjifnrhdnrjrjdjfjfkrjrjfjfjfjrnrnrnrbffnndbjdnrjjdbrhdjdnndbdbbbbbbfbfbbbbbbbbfffbb
+gdhxhdhxhfhfhchfhxhxncnxnxjxbcbxbdhdhdxjjxbbxjxcfjfbfnjcjcndn fjfjfj ddjfjfjfjfjfjfjfjjcjfjfnfjdjcjdjjdjd
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+1.11111111111111e+102
+6.66666666666555e+160
+1.11111111111111e+146
+1.11111111111111e+177
+11111111111111哈哈哈哈哈还哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈怕哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+111dhjsbfjfdkskfbdsfbdsjkfbdshufbbdisubfsidgfjdssbfidsbfdsbfiubdfuiisdbiufdsbdiufbsduyfuidsbfubfidsbfiudsbiinobhvuvugvjvjhvu
+1.11111111111111e+139
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbnbbbbbbbbbbbbbbbbnbbbbbbbbbbbbbbbbnbbbbbbnbbbbbbnbbbbbbbnnbbnbbbnnnnnbbnbbnbnbnnbbbnnnnnnnnnbbnbbbbbbbvbbbbbbbnbvvbbvbbbvvbnbvbbbbbbb
+1.11111111111111e+144
+1.11111111111111e+190
+运动会加油稿 坚定的信念，矫健的步伐，灵动的身姿，乐观的心态，你们用行动向我们展示了真正的运动精神。你们是这场运动会的主宰者，我们被你们所震撼，也为你们感到骄傲。 比赛纵然辛苦，但我觉不会轻易喊停。每前进一步，离胜利的终点更近一步。世上没有无尽头的道路，也没有无法翻越的高山。加油！成功的彼岸迎接你的终将是掌声与呐喊。相信自己，用坚韧的毅力去迎接成功的喜悦！ 十月的柔风吹拂着你们的衣角，十月的暖阳映射出你们朝气蓬勃的身影，十月的运动会赛场绽放着你们肆无忌惮的青春。青春无极限，爱拼才会赢。加油吧，令我们骄傲的运动健儿们！
+11111111111111111111111111111111111111111111111111111111114444444444444444444444444444444444444444444444444444456865655462432124243诶欢喜就好开心果i小嘎可惜高鸿商城佛佛AV西萨kg印象深刻学会思考v上课还从上次海鲜烧烤公开市场送潮汕机场你是处女送哈克萨斯快回来说不出来上厕所坚持就是货/@29吃还是陈子聪哈行了吧出来吧咋办哦吃在开车走出十里长街阿婆茶壶从上过床送抽象画送吃好吃上次就是
+1.11111111111111e+139
+1.11111111111111e+103
+1.11111111111111e+139
+1.11111111111111e+296
+1111111111116465456646456467567675645675675675675676575675675675675675676676756767676765756767556756756767567567567567567567567567567567567567567567567567567567567575657676756756756756767567643733537studdtudstususuegdg343423277322373275275673573273273243343372434273343323437533737231111111111111111111111111111
+。。。。。。。。。。。85352257555523545425536838528855856855855528858566358858525555555555666666666666666666666666666666666666666666666666668525555555558555555855558858855525558555558255858352355285
+1.11111111111111e+101
+1.11257276732765e+104
+hjhfugkooollbjkbsksksossbhdldbsjsososossodvdbodkdjdbdidvdjdvdjvdkdndbdkdvdoejpsbsjshsbeosnspznxxbxkndjdkdbdjekejhdidbdlalqmaksnxhxnoznsoasiabsjzbxhxbdodmdpamqkansosndbdkdnosndsnosnsiddidlspsnsnzodnepmslamsjsnsosndooxkdnsksjxbdjdbkdndodnwiwbsobekeksjdjdbdjdjdjdkdkdkdkdkdkdkdkdkdkdkdkdk
+1.11111111111111e+301
+未几拂荆扉不懂地方放打电话说计算机技术的时间世界计算机三级是拒绝的倒计时计算机等级倒计时就是就是见识见识见识见识见识见识计算机三级就是就是就是就是就是睡觉睡觉见识见识就是就是就是就是就是睡觉睡觉睡觉时间就是
+1.11111111111111e+101
+1.11111111111111e+157
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+1.11111111111111e+104
+1#1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111222212121221222212212212221221221112122121212121212121221121222121221212121212112121212221211222112121111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+（1）最大公约数和最小公倍数：输入两个正整数 m 和 n，输出它们的最大公约数和最小公倍数。 （2）求奇数和：读入一批正整数（以零或负数为结束标志），求其中的奇数和。 （3）求最小值：输入一个正整数 n, 再输入 n 个整数，输出最小值。 （4）求整数的位数以及各位数字之和：输入一个整数，求它的位数以及各位数字
+#include<stdio.h> int main(){ double money; scanf("%lf",&money); int Max_five = money/0.05; int Max_two = money/0.02; int Max_one = money/0.01; for(int i =0;i<=Max_one;i++){ for(int j=0;j<=Max_two;j++){ for(int k=0;k<=Max_five;k++){ if(0.01*i+0.02*j+0.05*k==money){ printf("需要一分钱%d个，两分钱%d个，五分钱%d个\n",i,j,k); } } } } }
+1.11111111111111e+101
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+。。 。 。 。 那边。。拜拜宝贝根本不vvvv给vvvvv刚刚缤纷年代接电话交点话费回电话好光辉岁月弧度都好好大汉帝国嘎嘎嘎嘎打工皇帝好好的过都好好嘎嘎嘎嘎三姑父V版三八大盖还是上班说不定不能随便难道你你电话你懂不懂
+觉得好的好的黑道皇后不对不对就不想八点半不方便大家不咸不淡你爸爸不对不对不错不行吧那些你下班男的女的吃吧查吧超级独具匠心你的背包大部分吧房间号差不多吧都不方便超级大卡卡手机手机领导检查你说的就当减肥经济大课间大家
+合适的好多好多话好哒好哒回答合适的好多好多话好哒好哒回答合适的好多好多话好哒好哒回答合适好多好多话好哒好哒回答合适的好多好多话好哒好哒回答合适的好多好多话好哒好哒回答合适的好多好多话好哒好哒回答合适好多好多话好哒好哒回答
