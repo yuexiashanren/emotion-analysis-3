@@ -167,7 +167,7 @@ def train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test):
     print ('定义一个简单的keras模型...')
     #定义基本网络结构（输入维度100，输出维度3）
     model = Sequential()  # or Graph or whatever
-#    #添加嵌入层，只能作为第一层，将输入转化为向量
+#    #添加嵌入层，只能作为第一层，用在网络的开始层将输入转换成向量
     model.add(Embedding(output_dim=vocab_dim, #大于0的整数，代表全连接嵌入的维度
                         input_dim=n_symbols, #大或等于0的整数，字典长度，即输入数据最大下标+1 
                         mask_zero=True, #布尔值，确定是否将输入中的‘0’看作是应该被忽略的‘填充’（padding）值，该参数在使用递归层处理变长输入时有用。
@@ -188,7 +188,7 @@ def train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test):
 #                  unroll=True,
 #                  ))
 
-    #采用50%的dropout,模型训练时随机让网络某些隐含层节点50%的权重不工作，避免过拟合（训练和测试数据的结果差别大）
+    #模型训练时随机让网络某些隐含层节点50%的权重不工作，避免过拟合（防止训练和测试数据的结果差别大，即提供模型的泛化能力）
     model.add(Dropout(0.5))
     #Dense=>全连接层,输出维度=3（三分类，输出维度为3，sigmoid）
     model.add(Dense(3)) 
