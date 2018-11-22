@@ -18,6 +18,7 @@ from keras.models import Sequential
 from keras.layers.embeddings import Embedding
 from keras.layers.recurrent import LSTM, GRU
 from keras.layers.core import Dense, Dropout,Activation
+from keras.layers import Bidirectional
 from keras.models import model_from_yaml
 
 from keras.layers import SimpleRNN
@@ -174,7 +175,13 @@ def train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test):
                         weights=[embedding_weights], #初始化权值的numpy arrays组成的list
                         input_length=input_length))  # 输入序列的长度
     #添加LSTM层,内部投影的维数和最终输出的维数为50，激活函数tanh
-    model.add(LSTM(units=50, activation='tanh')) 
+    #model.add(LSTM(units=50, activation='tanh')) 
+    #Bidirectional包装器（双向RNN包装器）
+    #return_sequences：控制hidden_state,True输出全部，False（默认）输出最后一个
+    #LSTM的网络结构中，直接根据当前input数据，得到的输出称为hidden state
+    model.add(Bidirectional(LSTM(units=50, return_sequences=True)))
+    model.add(Bidirectional(LSTM(units=50, return_sequences=False)))
+    
     #添加GRU层
     '''
     model.add(GRU(units=50,
@@ -192,7 +199,8 @@ def train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test):
     model.add(Dropout(0.5))
     #Dense=>全连接层,输出维度=3（三分类，输出维度为3，sigmoid）
     model.add(Dense(3)) 
-    #最后一层用激活函数softmax
+    #最后一层用激活函数softmax（输出区间（0,1））
+    #tanh输出区间（-1,1）
     model.add(Activation('softmax'))
     #二分类与多分类在前面的结构上都没有问题，就是需要改一下最后的全连接层，
     #因为此时有3分类，所以需要Dense(3)，同时激活函数是softmax，如果是二分类就是dense(2)+sigmoid(激活函数)
