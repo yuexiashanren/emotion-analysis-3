@@ -35,7 +35,7 @@ vocab_dim = 100 #向量维度
 n_iterations = 5  # 理想情况更多..
 n_exposures = 5 # 所有频数超过10的词语
 window_size = 7
-n_epoch = 6
+n_epoch = 6  #训练次数
 input_length = 100
 maxlen = 100 #文本保留的最大长度
 
@@ -136,7 +136,7 @@ def word2vec_train(combined):
     #模型训练
     model.train(combined,total_examples=model.corpus_count,epochs=model.iter)
     #模型保存（语料的索引及词向量）
-    model.save('./Word2vec_model.pkl')
+    model.save('./model/Word2vec_model.pkl')
     #每个词语的索引字典{单词：索引数字}##21088##、
     #词向量字典{单词：词向量（100维长的数组）}##21088##、
     #每个句子所对应的向量100维##总数据=21088*100##
@@ -180,7 +180,7 @@ def train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test):
     #return_sequences：控制hidden_state,True输出全部，False（默认）输出最后一个
     #LSTM的网络结构中，直接根据当前input数据，得到的输出称为hidden state
     model.add(Bidirectional(LSTM(units=50, return_sequences=True)))
-    model.add(Bidirectional(LSTM(units=50, return_sequences=False)))
+    model.add(Bidirectional(LSTM(units=50, activation='tanh', return_sequences=False)))
     
     #添加GRU层
     '''
@@ -224,10 +224,10 @@ def train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test):
                                 batch_size=batch_size)
     #以YAML字符串的形式返回模型，不包括权重，只包括结构
     yaml_string = model.to_yaml()
-    with open('./lstm.yml', 'w') as outfile:
+    with open('./model/lstm.yml', 'w') as outfile:
         outfile.write( yaml.dump(yaml_string, default_flow_style=True) )
     #将所有层的权值保存为HDF5文件
-    model.save_weights('./lstm.h5')
+    model.save_weights('./model/lstm.h5')
     print ('Test score:', score)
     print ('Test accuracy:', acc)
 

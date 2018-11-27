@@ -75,19 +75,19 @@ def input_transform(string):
     words=np.array(text_str).reshape(1,-1)
     #print("words1",words)
     #载入模型
-    model=Word2Vec.load('./Word2vec_model.pkl')
+    model=Word2Vec.load('./model/Word2vec_model.pkl')
     _,_,combined=create_dictionaries(model,words)
     return combined
 
 
 def lstm_predict(string):
     #print ('loading model...')
-    with open('./lstm.yml', 'r') as f:
+    with open('./model/lstm.yml', 'r') as f:
         yaml_string = yaml.load(f)
     model = model_from_yaml(yaml_string)
 
     #print ('loading weights...')
-    model.load_weights('./lstm.h5')
+    model.load_weights('./model/lstm.h5')
     model.compile(loss='categorical_crossentropy',
                   optimizer='adam',metrics=['accuracy'])
 

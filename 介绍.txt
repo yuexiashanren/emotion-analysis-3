@@ -4,3 +4,4 @@ lstm_test--训练和测试（尝试添加停用词典）
 model--训练后保存的模型
 read_excel--读取表格中指定标准的数据
 select_data--筛选符合条件（某一知识点）的评论数据
+experiment--论文实验
