@@ -2,12 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt  
 import matplotlib.gridspec as gridspec
 
-neg = ['3.86%', '3.12%', '3.53%', '4.13%', '2.49%', '3.39%', '4.03%', '7.63%', '3.18%', '4.77%', '8.24%', '3.53%', '4.07%']
-neu = ['0.00%', '0.28%', '0.15%', '0.00%', '0.00%', '0.85%', '1.06%', '1.17%', '0.00%', '0.00%', '0.00%', '0.21%', '0.31%']
-pos = ['96.14%', '96.59%', '96.32%', '95.87%', '97.51%', '95.76%', '94.92%', '91.19%', '96.82%', '95.23%', '91.76%', '96.27%', '95.62%']
+neg = [3.86, 13.12, 23.53, 14.13, 42.49]
+neu = [0.00, 14.28, 70.15, 80.00, 50.00]
+pos = [66.14, 76.59, 36.32, 25.87, 10.00]
 
 #设置x,y轴
-x = [x for x in range(1,14)]
+x = [x for x in range(1,6)]
+'''
 #定义figure
 plt.figure()
 #分隔figure,3行3列
@@ -24,13 +25,21 @@ ax3.plot(x, pos, color='green')
 ax3.set_title('positive')
 plt.show()
 
-
+'''
+#fig = plt.figure(num=1, figsize=(15, 8),dpi=80)
 plt.title('Result Analysis')
-plt.plot(x, pos, color='green', label='positive')
-plt.plot(x, neg, color='red', label='negative')
-plt.plot(x, neu,  color='skyblue', label='neural')
+
+plt.plot(x, neg)
+#plt.plot(neg, 'o', color='red')
+plt.plot(x, neu)
+#plt.plot(neu, 'o', color='skyblue')
+plt.plot(x, pos)
+#plt.plot(pos, 'o', color='green')
 plt.legend() # 显示图例
 #plt.plot(x,y)
+#plt.ylim(0, 100)
+#plt.yticks(np.linspace(0,100,28,endpoint=True)) 
+
 plt.xlabel("week(w)")#X轴标签
 plt.ylabel("percent(%)")#Y轴标签 
 plt.show()

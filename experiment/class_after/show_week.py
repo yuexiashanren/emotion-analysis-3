@@ -120,12 +120,12 @@ def lstm_predict(string,week):
         print('negative/sum: {:.2%}'.format(0))
         print('neural/sum: {:.2%}'.format(0))
         print('positive/sum: {:.2%}'.format(0))
-        return '{:.2%}'.format(0),'{:.2%}'.format(0),'{:.2%}'.format(0)
+        return '{:.2f}'.format(0),'{:.2f}'.format(0),'{:.2f}'.format(0)
     else:
         print('negative/sum: {:.2%}'.format(neg/sum))
         print('neural/sum: {:.2%}'.format(neu/sum))
         print('positive/sum: {:.2%}'.format(pos/sum))
-        return '{:.2%}'.format(neg/sum),'{:.2%}'.format(neu/sum),'{:.2%}'.format(pos/sum)
+        return '{:.2f}'.format(neg/sum),'{:.2f}'.format(neu/sum),'{:.2f}'.format(pos/sum)
 
 if __name__=='__main__':
      
@@ -158,19 +158,24 @@ if __name__=='__main__':
     #绘制图像
     ax1.plot(x, neg, color='red')
     ax1.set_title('negative')
-    ax2.plot(x, neu, color='skyblue')
+    ax2.plot(x, neu, color='blue')
     ax2.set_title('neural')
     ax3.plot(x, pos, color='green')
     ax3.set_title('positive')
+    plt.xlabel("week")#X轴标签
+    plt.ylabel("percent")#Y轴标签 
     plt.show()
 
     plt.title('Result Analysis')
     plt.plot(x, pos, color='green', label='positive')
+    plt.plot(x, pos, 'go')
     plt.plot(x, neg, color='red', label='negative')
-    plt.plot(x, neu,  color='skyblue', label='neural')
+    plt.plot(x, neg, 'ro')
+    plt.plot(x, neu,  color='blue', label='neural')
+    plt.plot(x, neu, 'bo')
     plt.legend() # 显示图例
     #plt.plot(x,y)
-    plt.xlabel("week(w)")#X轴标签
-    plt.ylabel("percent(%)")#Y轴标签 
+    plt.xlabel("week")#X轴标签
+    plt.ylabel("percent")#Y轴标签 
     plt.show()  
     

@@ -35,7 +35,7 @@ vocab_dim = 100 #向量维度
 n_iterations = 5  # 理想情况更多..
 n_exposures = 5 # 所有频数超过10的词语
 window_size = 7
-n_epoch = 6  #训练次数
+n_epoch = 10  #训练次数
 input_length = 100
 maxlen = 100 #文本保留的最大长度
 
@@ -180,7 +180,7 @@ def train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test):
     #return_sequences：控制hidden_state,True输出全部，False（默认）输出最后一个
     #LSTM的网络结构中，直接根据当前input数据，得到的输出称为hidden state
     model.add(Bidirectional(LSTM(units=50, return_sequences=True)))
-    model.add(Bidirectional(LSTM(units=50, activation='tanh', return_sequences=False)))
+    model.add(Bidirectional(LSTM(units=50, return_sequences=False)))
     
     #添加GRU层
     '''
