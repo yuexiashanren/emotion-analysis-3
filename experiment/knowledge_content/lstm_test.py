@@ -1,8 +1,7 @@
 #! /bin/env python
 # -*- coding: utf-8 -*-
 """
-添加停用词典
-预测
+知识点内容情感分析
 """
 import jieba
 import numpy as np
@@ -15,7 +14,7 @@ from keras.models import model_from_yaml
 np.random.seed(1337)  # For Reproducibility
 import sys
 sys.setrecursionlimit(1000000)
-jieba.load_userdict('./introduction.txt')
+jieba.load_userdict('../../data/introductions.txt')
 # 定义参数
 maxlen = 100
 
@@ -55,15 +54,20 @@ def create_dictionaries(model=None,
         print ('没有提供数据...')
 
 def loadStopWords():   
-    
-    stop = [line.strip()  for line in open('./stopWords.txt', 'r', encoding='utf-8').readlines() ]   
+    stop = [line.strip()  for line in open('../../data/stopWords.txt', 'r', encoding='utf-8').readlines() ]   
     #print("type(loadStopWords_stop)",type(stop))
-    return stop  
+    return stop
 
+def introductionWords():   
+    introduction = [line.strip()  for line in open('../../data/introductions.txt', 'r', encoding='utf-8').readlines() ]   
+    #print("type(loadStopWords_stop)",type(stop))
+    return introduction  
+f1 = open('./need_test.txt','w',encoding='utf-8')
+f2 = open('./text_str.txt','w',encoding='utf-8')
+f3 = open('./result_test.txt','w',encoding='utf-8')
 def input_transform(string):
     words=jieba.lcut(string)
-    #print("words",words)
-    
+    #去除停用词
     stopWords = loadStopWords()
     leftWords = []
     for i in words:
@@ -72,22 +76,37 @@ def input_transform(string):
     text_str = leftWords
     #print("text_str",text_str)
     
-    words=np.array(text_str).reshape(1,-1)
-    #print("words1",words)
-    #载入模型
-    model=Word2Vec.load('./model/Word2vec_model.pkl')
-    _,_,combined=create_dictionaries(model,words)
-    return combined
+    f2.write(str(text_str))
+    f2.write('\n')
 
+    #筛选符合知识点的数据
+    flag = "false"
+    introductions = introductionWords()
+    for i in text_str:
+        if i in introductions:
+            flag = "true"
+            f3.write(str(text_str))
+            f3.write('\n')
+            break
+    if flag == "true":
+        words=np.array(text_str).reshape(1,-1)
+        f1.write(str(words))
+        f1.write('\n')
+        #载入模型
+        model=Word2Vec.load('../../lstm_test/model/Word2vec_model.pkl')
+        _,_,combined=create_dictionaries(model,words)
+        return combined
+    else:
+        return "none"
 
 def lstm_predict(string):
     #print ('loading model...')
-    with open('./model/lstm.yml', 'r') as f:
+    with open('../../lstm_test/model/lstm.yml', 'r') as f:
         yaml_string = yaml.load(f)
     model = model_from_yaml(yaml_string)
 
     #print ('loading weights...')
-    model.load_weights('./model/lstm.h5')
+    model.load_weights('../../lstm_test/model/lstm.h5')
     model.compile(loss='categorical_crossentropy',
                   optimizer='adam',metrics=['accuracy'])
 
@@ -98,20 +117,21 @@ def lstm_predict(string):
     with open(string ,'r', encoding='utf-8') as ff:
         for line in ff.readlines():
             data=input_transform(line)
-            data.reshape(1,-1)
-            #print data
-            result=model.predict_classes(data)
-            choose = result[0]
-            print(sum+1,choose)
-            if choose==1:
-                pos += 1
-                sum += 1
-            elif choose==0:
-                neu += 1
-                sum += 1
-            else:
-                neg += 1
-                sum += 1
+            if(data != "none"):
+                data.reshape(1,-1)
+                #print data
+                result=model.predict_classes(data)
+                choose = result[0]
+                print(sum+1,choose)
+                if choose==1:
+                    pos += 1
+                    sum += 1
+                elif choose==0:
+                    neu += 1
+                    sum += 1
+                else:
+                    neg += 1
+                    sum += 1
     print("sum",sum)
     print("negative:",neg)
     print("neural",neu)
@@ -120,12 +140,7 @@ def lstm_predict(string):
     print('neural/sum: {:.2%}'.format(neu/sum))
     print('positive/sum: {:.2%}'.format(pos/sum))
 
-
 if __name__=='__main__':
     
-    string = './result_test.txt'
+    string = './input_test.txt'
     lstm_predict(string)       
-
-
-
-    
