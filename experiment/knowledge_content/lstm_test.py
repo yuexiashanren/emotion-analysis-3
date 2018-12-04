@@ -117,7 +117,7 @@ def lstm_predict(string):
     with open(string ,'r', encoding='utf-8') as ff:
         for line in ff.readlines():
             data=input_transform(line)
-            if(data != "none"):
+            if data != "none":
                 data.reshape(1,-1)
                 #print data
                 result=model.predict_classes(data)
