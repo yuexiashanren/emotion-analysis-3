@@ -15,6 +15,16 @@ np.random.seed(1337)  # For Reproducibility
 import sys
 sys.setrecursionlimit(1000000)
 
+jieba.load_userdict('../../data/introductions.txt')
+jieba.load_userdict('../../data/emotions.txt')
+jieba.load_userdict('../knowledge_content/units/unit1.txt')
+jieba.load_userdict('../knowledge_content/units/unit2.txt')
+jieba.load_userdict('../knowledge_content/units/unit3.txt')
+jieba.load_userdict('../knowledge_content/units/unit4.txt')
+jieba.load_userdict('../knowledge_content/units/unit5.txt')
+jieba.load_userdict('../knowledge_content/units/unit6.txt')
+jieba.load_userdict('../knowledge_content/units/unit7.txt')
+
 import numpy as np  
 import matplotlib.pyplot as plt  
 import matplotlib.gridspec as gridspec

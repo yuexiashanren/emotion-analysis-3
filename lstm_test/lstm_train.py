@@ -28,7 +28,16 @@ import sys
 sys.setrecursionlimit(1000000)
 import yaml
 #jieba中添加专业词典
-jieba.load_userdict('./introduction.txt') 
+jieba.load_userdict('../data/introductions.txt')
+jieba.load_userdict('../data/emotions.txt')
+jieba.load_userdict('../experiment/knowledge_content/units/unit1.txt')
+jieba.load_userdict('../experiment/knowledge_content/units/unit2.txt')
+jieba.load_userdict('../experiment/knowledge_content/units/unit3.txt')
+jieba.load_userdict('../experiment/knowledge_content/units/unit4.txt')
+jieba.load_userdict('../experiment/knowledge_content/units/unit5.txt')
+jieba.load_userdict('../experiment/knowledge_content/units/unit6.txt')
+jieba.load_userdict('../experiment/knowledge_content/units/unit7.txt')
+ 
 # 设置参数
 cpu_count = multiprocessing.cpu_count() # 4
 vocab_dim = 100 #向量维度
@@ -58,7 +67,7 @@ def loadfile():
 #获取停用词
 def loadStopWords():   
     
-    stop = [line.strip()  for line in open('./stopWords.txt', 'r', encoding='utf-8').readlines() ]   
+    stop = [line.strip()  for line in open('../data/stopWords.txt', 'r', encoding='utf-8').readlines() ]   
     #print("type(loadStopWords_stop)",type(stop))
     return stop  
 
