@@ -68,7 +68,7 @@ def create_dictionaries(model=None,
         print ('没有提供数据...')
 
 def loadStopWords():   
-    stop = [line.strip()  for line in open('../../lstm_test/stopWords.txt', 'r', encoding='utf-8').readlines() ]   
+    stop = [line.strip()  for line in open('../../data/stopWords.txt', 'r', encoding='utf-8').readlines() ]   
     #print("type(loadStopWords_stop)",type(stop))
     return stop
 
@@ -137,9 +137,9 @@ def input_transform(string,unitDatas):
         return combined
     else:
         return "none"
+
 f1 = open('./text_str.txt','w',encoding='utf-8')
 f2 = open('./result_test.txt','w',encoding='utf-8')
-
 def lstm_predict(string,unit,unitDatas):
     #print ('loading model...')
     with open('../../lstm_test/model/lstm.yml', 'r') as f:
@@ -183,9 +183,33 @@ def lstm_predict(string,unit,unitDatas):
     print("negative:",neg)
     print("neural",neu)
     print("positive",pos)
-    
+    if sum == 0:
+        print('negative/sum: {:.2%}'.format(0))
+        print('neural/sum: {:.2%}'.format(0))
+        print('positive/sum: {:.2%}'.format(0))
+    else:
+        print('negative/sum: {:.2%}'.format(neg/sum))
+        print('neural/sum: {:.2%}'.format(neu/sum))
+        print('positive/sum: {:.2%}'.format(pos/sum))
+    #区域标签
+    labels = 'neg','neu','pos'
+    #区域大小
+    sizes = neg/sum, neu/sum, pos/sum
+    #区域颜色
+    colors = 'red', 'blue', 'green'
+    #区域缝隙
+    explode=0.1,0.08,0.12
+    #autopct，圆里面的文本格式，%1.2f%%表示小数有2位
+    #startangle，起始角度，表示从0开始逆时针转
+    #shadow，True表示有一定的阴影,False表示没有阴影
+    plt.pie(sizes,explode=explode,labels=labels,
+            colors=colors,autopct='%1.2f%%',shadow=True,startangle=90)
+    #保证饼状图是正圆，否则会有一点角度偏斜
+    plt.axis('equal')
+    plt.show()
+
 if __name__=='__main__':
-     
+    #输入的数据源
     route = './input_test.txt'
     for i in range(1,8):
         unit = [unit1Datas(), unit2Datas(), unit3Datas(), unit4Datas(), unit5Datas(), unit6Datas(), unit7Datas()]
