@@ -44,7 +44,7 @@ vocab_dim = 100 #向量维度
 n_iterations = 5  # 理想情况更多..
 n_exposures = 5 # 所有频数超过10的词语
 window_size = 7
-n_epoch = 10  #训练次数
+n_epoch = 6  #训练次数
 input_length = 100
 maxlen = 100 #文本保留的最大长度
 
@@ -52,9 +52,9 @@ batch_size = 32
 
 
 def loadfile():
-    neg=pd.read_csv('./neg.csv',header=None,index_col=None,error_bad_lines=False)
-    pos=pd.read_csv('./pos.csv',header=None,index_col=None,error_bad_lines=False)
-    neu=pd.read_csv('./neu.csv', header=None, index_col=None,error_bad_lines=False)
+    neg=pd.read_csv('../data/neg.csv',header=None,index_col=None,error_bad_lines=False)
+    pos=pd.read_csv('../data/pos.csv',header=None,index_col=None,error_bad_lines=False)
+    neu=pd.read_csv('../data/neu.csv', header=None, index_col=None,error_bad_lines=False)
 
     #数组拼接
     combined = np.concatenate((pos[0], neu[0], neg[0]))
@@ -76,8 +76,8 @@ def cutWords(text):
     
     #分词
     text = [jieba.lcut(document.replace('\n', '')) for document in text]
-    #读取分词后的数据，去除停用词后写入文本
-    f_o = open('./cutWords.txt', 'w', encoding='utf-8')
+    #读取分词后的数据，数据预处理后写入文本
+    f_o = open('../data/cutWords.txt', 'w', encoding='utf-8')
     stopWords = loadStopWords()
     for line in text: 
         leftWords = []   
@@ -90,7 +90,7 @@ def cutWords(text):
     f_o.close()
     #return text
     
-    with open('./cutWords.txt','r',encoding='utf-8') as text_list:
+    with open('../data/cutWords.txt','r',encoding='utf-8') as text_list:
         return list(text_list)
     
 #创建词语字典，并返回每个词语的索引，词向量，以及每个句子所对应的词语索引
@@ -249,7 +249,7 @@ print ("数据集：",len(combined),"，数据集标签：",len(y))
 
 print ('分词...')
 combined = cutWords(combined)
-f1 = open('./combined.txt','w',encoding='utf-8')
+f1 = open('../data/combined.txt','w',encoding='utf-8')
 for line in combined:
     f1.write(str(line))
 f1.close()

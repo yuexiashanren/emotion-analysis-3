@@ -130,12 +130,7 @@ def lstm_predict(string):
     print('neural/sum: {:.2%}'.format(neu/sum))
     print('positive/sum: {:.2%}'.format(pos/sum))
 
-
 if __name__=='__main__':
     
-    string = './result_test.txt'
+    string = '../data/result_test.txt'
     lstm_predict(string)       
-
-
-
-    

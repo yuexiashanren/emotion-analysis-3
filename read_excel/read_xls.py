@@ -1,5 +1,5 @@
 '''
-读取表格中属于各种情感值的数据，存储到情感倾向.csv中
+读取表格中属于各种情感值的数据，存储到./neg/neu/pos/del.csv中
 '''
 # -*- coding: utf-8 -*-
 import xlrd

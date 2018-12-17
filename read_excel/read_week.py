@@ -1,5 +1,5 @@
 '''
-读取每一周的数据单独存储到周次.txt中
+读取每一周的数据单独存储到./week/01-13/del.txt中
 '''
 # -*- coding: utf-8 -*-
 import xlrd
