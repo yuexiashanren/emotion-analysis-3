@@ -191,6 +191,7 @@ def lstm_predict(string,unit,unitDatas):
         print('negative/sum: {:.2%}'.format(neg/sum))
         print('neural/sum: {:.2%}'.format(neu/sum))
         print('positive/sum: {:.2%}'.format(pos/sum))
+    '''
     #区域标签
     labels = 'neg','neu','pos'
     #区域大小
@@ -207,6 +208,7 @@ def lstm_predict(string,unit,unitDatas):
     #保证饼状图是正圆，否则会有一点角度偏斜
     plt.axis('equal')
     plt.show()
+    '''
 
 if __name__=='__main__':
     #输入的数据源

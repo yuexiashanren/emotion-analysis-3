@@ -5,6 +5,7 @@ result_test.txt：输入数据的词向量表示
 
 read_all.py：筛选所有由情感标签的数据存入input_test.txt
 show_content.py：显示每一章节的情感分布
+dedup.py：./units/unit1-7.txt词典的去重
 
 结果：
 单元 1
