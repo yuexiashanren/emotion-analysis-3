@@ -1,7 +1,7 @@
 #! /bin/env python
 # -*- coding: utf-8 -*-
 """
-每周总结13周内的情感分析
+综合所有维度的情感分析
 """
 import jieba
 import numpy as np
@@ -38,7 +38,6 @@ def create_dictionaries(model=None,
         1-创建索引映射的单词
         2-创建一个单词到矢量映射
         3-转换训练和测试词典
-
     '''
     if (combined is not None) and (model is not None):
         gensim_dict = Dictionary()
@@ -138,26 +137,31 @@ def lstm_predict(string,week):
         return '{:.2f}'.format(neg/sum),'{:.2f}'.format(neu/sum),'{:.2f}'.format(pos/sum)
 
 if __name__=='__main__':
-     
-    neg = [0,0,0,0,0,0,0,0,0,0,0,0,0]
-    neu = [0,0,0,0,0,0,0,0,0,0,0,0,0]
-    pos = [0,0,0,0,0,0,0,0,0,0,0,0,0]
+    neg = [ 0 for i in range(13)]
+    neu = [ 0 for i in range(13)]
+    pos = [ 0 for i in range(13)]
+    acc = [0.8, 0.68, 0.71, 0.69, 0.84, 0.86, 0.79, 0.88, 0.9, 0.76, 0.87, 0.71, 0.76]
     for i in range(1,14):
         if(i<10):
-            route = './weeks/0'+str(i)+'.txt'
+            route = '../weeks/0'+str(i)+'.txt'
         else:
-            route = './weeks/'+str(i)+'.txt'
+            route = '../weeks/'+str(i)+'.txt'
         result = lstm_predict(route,i)
-        neg[i-1] = result[0]
-        neu[i-1] = result[1]
-        pos[i-1] = result[2]
+        neg[i-1] = float(result[0])
+        neu[i-1] = float(result[1])
+        pos[i-1] = float(result[2])
     
     print("negative",neg)
     print("neural",neu)
     print("positive",pos)  
-
+    '''
+    negative [0.23, 0.24, 0.27, 0.25, 0.19, 0.26, 0.23, 0.16, 0.18, 0.24, 0.28, 0.24, 0.22]
+    neural [0.72, 0.71, 0.66, 0.69, 0.76, 0.67, 0.72, 0.78, 0.76, 0.7, 0.67, 0.66, 0.69]
+    positive [0.06, 0.05, 0.08, 0.06, 0.05, 0.07, 0.05, 0.06, 0.06, 0.07, 0.04, 0.1, 0.08]
+    '''
     #设置x,y轴
     x = [x for x in range(1,14)]
+    xx = [xx for xx in range(0,13)]
     #定义figure
     plt.figure()
     #分隔figure,3行3列
@@ -175,17 +179,19 @@ if __name__=='__main__':
     plt.xlabel("week")#X轴标签
     plt.ylabel("percent")#Y轴标签
     plt.show()
+    #绘制整体柱状图
+    addPG = [addPG for addPG in range(len(pos))]
+    for i in range(len(pos)):
+        addPG[i] = float('{:.2f}'.format(pos[i]+neu[i]))
 
     plt.title('Result Analysis')
-    plt.plot(x, pos, color='green', label='positive')
-    plt.plot(x, pos, 'go')
-    plt.plot(x, neg, color='red', label='negative')
-    plt.plot(x, neg, 'ro')
-    plt.plot(x, neu,  color='blue', label='neural')
-    plt.plot(x, neu, 'bo')
-    plt.legend() # 显示图例
-    #plt.plot(x,y)
+    #range()=>x, pos=>y, bottom=>柱形y轴坐标（柱形堆叠时的起始y轴位置）, tick_label=>刻度线
+    plt.bar(range(len(pos)), pos, label='positive',fc = 'green')
+    plt.bar(range(len(pos)), neu, bottom=pos, label='neural',fc = 'blue')
+    plt.bar(range(len(pos)), neg, bottom=addPG, label='negative',tick_label = x, fc = 'red')
+    plt.plot(xx, acc, color='yellow', label='accuracy')
+    plt.plot(xx, acc, 'go')
+    plt.legend()
     plt.xlabel("week")#X轴标签
     plt.ylabel("percent")#Y轴标签 
-    plt.show()  
-    
+    plt.show() 

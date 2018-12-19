@@ -69,7 +69,7 @@ def create_dictionaries(model=None,
 
 def loadStopWords():   
     
-    stop = [line.strip()  for line in open('../../lstm_test/stopWords.txt', 'r', encoding='utf-8').readlines() ]   
+    stop = [line.strip()  for line in open('../../data/stopWords.txt', 'r', encoding='utf-8').readlines() ]   
     #print("type(loadStopWords_stop)",type(stop))
     return stop  
 

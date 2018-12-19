@@ -15,6 +15,16 @@ np.random.seed(1337)  # For Reproducibility
 import sys
 sys.setrecursionlimit(1000000)
 
+jieba.load_userdict('../data/introductions.txt')
+jieba.load_userdict('../data/emotions.txt')
+jieba.load_userdict('./knowledge_content/units/unit1.txt')
+jieba.load_userdict('./knowledge_content/units/unit2.txt')
+jieba.load_userdict('./knowledge_content/units/unit3.txt')
+jieba.load_userdict('./knowledge_content/units/unit4.txt')
+jieba.load_userdict('./knowledge_content/units/unit5.txt')
+jieba.load_userdict('./knowledge_content/units/unit6.txt')
+jieba.load_userdict('./knowledge_content/units/unit7.txt')
+
 import numpy as np  
 import matplotlib.pyplot as plt  
 import matplotlib.gridspec as gridspec
@@ -58,7 +68,7 @@ def create_dictionaries(model=None,
 
 def loadStopWords():   
     
-    stop = [line.strip()  for line in open('../lstm_test/stopWords.txt', 'r', encoding='utf-8').readlines() ]   
+    stop = [line.strip()  for line in open('../data/stopWords.txt', 'r', encoding='utf-8').readlines() ]   
     #print("type(loadStopWords_stop)",type(stop))
     return stop  
 
