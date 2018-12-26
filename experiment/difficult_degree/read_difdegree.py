@@ -187,8 +187,7 @@ print("各阶段总成绩：",sco_sum)
 print("各阶段学生总数：",stu_sum)
 '''
 #str=>float
-for i in range(0,13):
-	sco_ave[i] = list(map(float,sco_ave[i]))
+	sco_ave = list(map(float,sco_ave))
 '''
 for i in range(0,13):
 	for j in range(0,3):
