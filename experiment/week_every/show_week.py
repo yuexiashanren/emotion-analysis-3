@@ -139,9 +139,9 @@ def lstm_predict(string,week):
 
 if __name__=='__main__':
      
-    neg = [0,0,0,0,0,0,0,0,0,0,0,0,0]
-    neu = [0,0,0,0,0,0,0,0,0,0,0,0,0]
-    pos = [0,0,0,0,0,0,0,0,0,0,0,0,0]
+    neg = [ 0 for i in range(13)]
+    neu = [ 0 for i in range(13)]
+    pos = [ 0 for i in range(13)]
     for i in range(1,14):
         if(i<10):
             route = './weeks/0'+str(i)+'.txt'

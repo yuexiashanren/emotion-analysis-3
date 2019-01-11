@@ -2,7 +2,7 @@
   \ config:\n    activity_regularizer: null\n    batch_input_shape: !!python/tuple\
   \ [null, 100]\n    dtype: float32\n    embeddings_constraint: null\n    embeddings_initializer:\n\
   \      class_name: RandomUniform\n      config: {maxval: 0.05, minval: -0.05, seed:\
-  \ null}\n    embeddings_regularizer: null\n    input_dim: 1576\n    input_length:\
+  \ null}\n    embeddings_regularizer: null\n    input_dim: 1596\n    input_length:\
   \ 100\n    mask_zero: true\n    name: embedding_1\n    output_dim: 100\n    trainable:\
   \ true\n- class_name: Bidirectional\n  config:\n    layer:\n      class_name: LSTM\n\
   \      config:\n        activation: tanh\n        activity_regularizer: null\n \

@@ -39,12 +39,12 @@ jieba.load_userdict('../experiment/knowledge_content/units/unit6.txt')
 jieba.load_userdict('../experiment/knowledge_content/units/unit7.txt')
  
 # 设置参数
-cpu_count = multiprocessing.cpu_count() # 4
-vocab_dim = 100 #向量维度
-n_iterations = 5  # 理想情况更多..
-n_exposures = 5 # 所有频数超过10的词语
-window_size = 7
-n_epoch = 6  #训练次数
+cpu_count = multiprocessing.cpu_count() # 词向量训练参数训练的并行数
+vocab_dim = 100 #词向量训练特征向量维度
+n_iterations = 5  # 词向量训练迭代次数
+n_exposures = 5 # 词向量训练最小词频
+window_size = 5 #词向量训练当前词与预测词在一个句子中的最大距离
+n_epoch = 7  #训练次数
 input_length = 100
 maxlen = 100 #文本保留的最大长度
 
@@ -210,13 +210,14 @@ def train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test):
     model.add(Dense(3)) 
     #最后一层用激活函数softmax（输出区间（0,1））
     #tanh输出区间（-1,1）
-    model.add(Activation('softmax'))
+    model.add(Activation('sigmoid'))
     #二分类与多分类在前面的结构上都没有问题，就是需要改一下最后的全连接层，
     #因为此时有3分类，所以需要Dense(3)，同时激活函数是softmax，如果是二分类就是dense(2)+sigmoid(激活函数)
 
     print ('编译模型...')
     #loss-目标函数（categorical_crossentropy-多分类，binary_crossentropy-二分类）
     #optimizer-指定模型训练的优化器
+    #metrics-模型评估函数
     model.compile(loss='categorical_crossentropy',
                   optimizer='adam',metrics=['accuracy'])
 

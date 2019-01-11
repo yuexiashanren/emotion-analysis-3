@@ -40,4 +40,4 @@
   \ VarianceScaling\n      config: {distribution: uniform, mode: fan_avg, scale: 1.0,\
   \ seed: null}\n    kernel_regularizer: null\n    name: dense_1\n    trainable: true\n\
   \    units: 3\n    use_bias: true\n- class_name: Activation\n  config: {activation:\
-  \ softmax, name: activation_1, trainable: true}\nkeras_version: 2.1.6\n"
+  \ sigmoid, name: activation_1, trainable: true}\nkeras_version: 2.1.6\n"
