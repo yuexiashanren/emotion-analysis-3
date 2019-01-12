@@ -45,6 +45,11 @@ cor_rte = [ [0] * 3 for i in range(13)]
 #初始化周次的正确率1-13周
 week_rate = [ 0 for i in range(13)]
 
+#课前习题正确率
+classBefore = [ 0 for i in range(13)]
+#课后习题正确率
+classAfter = [ 0 for i in range(13)]
+
 f = open('./dif_degree.txt', 'w', encoding='utf-8')
 
 #课前预习筛选
@@ -201,36 +206,43 @@ print("各阶段题目数量：",que_num)
 for i in range(0,13):
 	for j in range(0,3):
 		if que_num[i][j] != 0:
-			cor_rte[i][j] = float('{:.2f}'.format(sco_ave[i][j]/que_num[i][j]))			
+			cor_rte[i][j] = float('{:.4f}'.format(sco_ave[i][j]/que_num[i][j]))			
 		else:
 			cor_rte[i][j] = float('{:.2f}'.format(0))
 #题目正确率 = 课前/课后/实验阶段的平均得分/课前/课后/实验阶段的总分
 print("各阶段题目正确率：",cor_rte)
 for i in range(0,13):
-	if stu_sum[i][0]+stu_sum[i][1]+stu_sum[i][2] != 0:
-		week_rate[i] = float('{:.2f}'.format(
-						(cor_rte[i][0]*stu_sum[i][0]+cor_rte[i][1]*stu_sum[i][1]+
-							cor_rte[i][2]*stu_sum[i][2])/(stu_sum[i][0]+stu_sum[i][1]+stu_sum[i][2])
-						))
+	if cor_rte[i][0] != 0:
+		classBefore[i] = cor_rte[i][0]
 	else:
-		week_rate[i] = float(0)
+		classBefore[i] = classBefore[i-1]
+	if cor_rte[i][1] != 0:
+		classAfter[i] = cor_rte[i][1]
+	else:
+		classAfter[i] = classAfter[i-1]
+	week_rate[i] = float('{:.4f}'.format(
+						(classBefore[i]*stu_sum[i][0]+classAfter[i]*stu_sum[i][1])/(stu_sum[i][0]+stu_sum[i][1])
+						))
+
+#课前预习正确率
+print("课前预习正确率:",classBefore)
+#课后作业正确率
+print("课后作业正确率:",classAfter)
 #周次的平均正确率 = 课前/课后/实验阶段正确率*该阶段人数/该周次的总人数
 print("学习周题目正确率：",week_rate)
-'''
-print("实际学生人数：",nrows1+nrows2+nrows4)
-s = 0
-for i in range(0,13):
-	s += sum(stu_sum[i])
-print("输出学生人数：",s)
-'''
+
 #设置x,y轴
 x = [x for x in range(1,14)]
 #定义figure
 plt.figure()
 
 plt.title('Result Analysis')
-plt.plot(x, week_rate, color='green', label='accuracy')
-plt.plot(x, week_rate, 'go')
+plt.plot(x, classBefore, color='green')
+plt.plot(x, classBefore, 'g^', label='class_before')
+plt.plot(x, classAfter, color='red')
+plt.plot(x, classAfter, 'rd', label='class_after')
+#plt.plot(x, week_rate, color='red')
+#plt.plot(x, week_rate, 'r*', label='average')
 plt.legend() # 显示图例
 #plt.plot(x,y)
 plt.xlabel("week")#X轴标签
