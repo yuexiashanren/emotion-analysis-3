@@ -1,7 +1,7 @@
 #! /bin/env python
 # -*- coding: utf-8 -*-
 """
-预测
+输出某个同学第几周的最终情感值
 """
 import jieba
 import numpy as np
@@ -25,21 +25,10 @@ jieba.load_userdict('../experiment/knowledge_content/units/unit5.txt')
 jieba.load_userdict('../experiment/knowledge_content/units/unit6.txt')
 jieba.load_userdict('../experiment/knowledge_content/units/unit7.txt')
 
-import numpy as np  
-import matplotlib.pyplot as plt  
-import matplotlib.gridspec as gridspec
-
 # 定义参数
 maxlen = 100
 
-def create_dictionaries(model=None,
-                        combined=None):
-    ''' Function does are number of Jobs:
-        1-创建索引映射的单词
-        2-创建一个单词到矢量映射
-        3-转换训练和测试词典
-
-    '''
+def create_dictionaries(model=None, combined=None):
     if (combined is not None) and (model is not None):
         gensim_dict = Dictionary()
         gensim_dict.doc2bow(model.wv.vocab.keys(),
@@ -68,27 +57,30 @@ def create_dictionaries(model=None,
         print ('没有提供数据...')
 
 def loadStopWords():   
-    
     stop = [line.strip()  for line in open('../data/stopWords.txt', 'r', encoding='utf-8').readlines() ]   
-    #print("type(loadStopWords_stop)",type(stop))
     return stop  
 
 def input_transform(string):
     words=jieba.lcut(string)
-    words=np.array(words).reshape(1,-1)
+    
+    stopWords = loadStopWords()
+    leftWords = []
+    for i in words:
+        if(i not in stopWords):
+            leftWords.append(i)
+    text_str = leftWords
+
+    words=np.array(text_str).reshape(1,-1)
     #载入模型
     model=Word2Vec.load('../lstm_test/model/Word2vec_model.pkl')
     _,_,combined=create_dictionaries(model,words)
     return combined
 
-
-def lstm_predict(string,week):
-    #print ('loading model...')
+weekValue = [ 0 for i in range(3)]
+def lstm_predict(string):
     with open('../lstm_test/model/lstm.yml', 'r') as f:
         yaml_string = yaml.load(f)
     model = model_from_yaml(yaml_string)
-
-    #print ('loading weights...')
     model.load_weights('../lstm_test/model/lstm.h5')
     model.compile(loss='categorical_crossentropy',
                   optimizer='adam',metrics=['accuracy'])
@@ -96,7 +88,7 @@ def lstm_predict(string,week):
     neg = 0
     neu = 0
     pos = 0
-    sum = 0
+    now = 0
     with open(string ,'r', encoding='utf-8') as ff:
         for line in ff.readlines():
             data=input_transform(line)
@@ -104,75 +96,38 @@ def lstm_predict(string,week):
             #print data
             result=model.predict_classes(data)
             choose = result[0]
-            #print(sum+1,choose)
+            print(now+1,choose)
             if choose==1:
                 pos += 1
-                sum += 1
+                weekValue[now] = 1
+                now += 1
             elif choose==0:
                 neu += 1
-                sum += 1
+                weekValue[now] = 0
+                now += 1
             else:
                 neg += 1
-                sum += 1
-    print("第",week,"周：")
-    print("sum",sum)
+                weekValue[now] = -1
+                now += 1
+    print("now",now)
     print("negative:",neg)
     print("neural",neu)
     print("positive",pos)
-    print('negative/sum: {:.2%}'.format(neg/sum))
-    print('neural/sum: {:.2%}'.format(neu/sum))
-    print('positive/sum: {:.2%}'.format(pos/sum))
-    return '{:.2%}'.format(neg/sum),'{:.2%}'.format(neu/sum),'{:.2%}'.format(pos/sum)
-
+    #print("weekValue",weekValue)
+    return weekValue
 
 if __name__=='__main__':
-     
-    neg = [0,0,0,0,0,0,0,0,0,0,0,0,0]
-    neu = [0,0,0,0,0,0,0,0,0,0,0,0,0]
-    pos = [0,0,0,0,0,0,0,0,0,0,0,0,0]
-    for i in range(1,14):
-        if(i<10):
-            route = './week/0'+str(i)+'.txt'
-        else:
-            route = './week/'+str(i)+'.txt'
-        result = lstm_predict(route,i)
-        neg[i-1] = result[0]
-        neu[i-1] = result[1]
-        pos[i-1] = result[2]
-    
-    print("negative",neg)
-    print("neural",neu)
-    print("positive",pos)  
+    string = './oneStudent/oneWeek.txt'
+    weekValue = lstm_predict(string)
+    weight = [1,1.5,2]
+    def addWeight(weight,arr):
+        arrLen = len(arr)
+        emoValue = arr[0]*weight[0]+arr[1]*weight[1]+arr[2]*weight[2]
+        '''
+        emoValue = [ 0 for i in range(arrLen)]
+        for i in range(arrLen):
+            emoValue[i] = arr[0]*weight[0]+arr[1]*weight[1]+arr[2]*weight[2]
+        '''
+        return emoValue
+    print("result",addWeight(weight,weekValue))
 
-    #设置x,y轴
-    x = [x for x in range(1,14)]
-    #定义figure
-    plt.figure()
-    #分隔figure,3行3列
-    gs = gridspec.GridSpec(3, 3)
-    ax1 = plt.subplot(gs[0, :])
-    ax2 = plt.subplot(gs[1, :])
-    ax3 = plt.subplot(gs[2, :])
-    #绘制图像
-    ax1.plot(x, neg, color='red')
-    ax1.set_title('negative')
-    ax2.plot(x, neu, color='skyblue')
-    ax2.set_title('neural')
-    ax3.plot(x, pos, color='green')
-    ax3.set_title('positive')
-    plt.show()
-
-
-    plt.title('Result Analysis')
-    plt.plot(x, pos, color='green', label='positive')
-    plt.plot(x, neg, color='red', label='negative')
-    plt.plot(x, neu,  color='skyblue', label='neural')
-    plt.legend() # 显示图例
-    #plt.plot(x,y)
-    plt.xlabel("week(w)")#X轴标签
-    plt.ylabel("percent(%)")#Y轴标签 
-    plt.show()  
-
-
-
-    

@@ -1,3 +1,5 @@
+reacll.py：计算模型召回率
+finish_value.py：计算某周的最终情感值
 lstm_train.py：训练
 数据集： 6498 ，数据集标签： 6498
 训练集： (5198, 100) ，训练集标签： (5198, 3)
@@ -25,5 +27,3 @@ positive 8
 negative/sum: 6.67%
 neural/sum: 66.67%
 positive/sum: 26.67%
-
-reacll.py：计算模型召回率

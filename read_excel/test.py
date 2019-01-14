@@ -1,6 +1,7 @@
 #! /bin/env python
 # -*- coding: utf-8 -*-
 """
+添加停用词典
 预测
 """
 import jieba
@@ -24,10 +25,6 @@ jieba.load_userdict('../experiment/knowledge_content/units/unit4.txt')
 jieba.load_userdict('../experiment/knowledge_content/units/unit5.txt')
 jieba.load_userdict('../experiment/knowledge_content/units/unit6.txt')
 jieba.load_userdict('../experiment/knowledge_content/units/unit7.txt')
-
-import numpy as np  
-import matplotlib.pyplot as plt  
-import matplotlib.gridspec as gridspec
 
 # 定义参数
 maxlen = 100
@@ -75,14 +72,25 @@ def loadStopWords():
 
 def input_transform(string):
     words=jieba.lcut(string)
-    words=np.array(words).reshape(1,-1)
+    #print("words",words)
+    
+    stopWords = loadStopWords()
+    leftWords = []
+    for i in words:
+        if(i not in stopWords):
+            leftWords.append(i)
+    text_str = leftWords
+    #print("text_str",text_str)
+    
+    words=np.array(text_str).reshape(1,-1)
+    #print("words1",words)
     #载入模型
     model=Word2Vec.load('../lstm_test/model/Word2vec_model.pkl')
     _,_,combined=create_dictionaries(model,words)
     return combined
 
 
-def lstm_predict(string,week):
+def lstm_predict(string):
     #print ('loading model...')
     with open('../lstm_test/model/lstm.yml', 'r') as f:
         yaml_string = yaml.load(f)
@@ -104,7 +112,7 @@ def lstm_predict(string,week):
             #print data
             result=model.predict_classes(data)
             choose = result[0]
-            #print(sum+1,choose)
+            print(sum+1,choose)
             if choose==1:
                 pos += 1
                 sum += 1
@@ -114,7 +122,6 @@ def lstm_predict(string,week):
             else:
                 neg += 1
                 sum += 1
-    print("第",week,"周：")
     print("sum",sum)
     print("negative:",neg)
     print("neural",neu)
@@ -122,57 +129,8 @@ def lstm_predict(string,week):
     print('negative/sum: {:.2%}'.format(neg/sum))
     print('neural/sum: {:.2%}'.format(neu/sum))
     print('positive/sum: {:.2%}'.format(pos/sum))
-    return '{:.2%}'.format(neg/sum),'{:.2%}'.format(neu/sum),'{:.2%}'.format(pos/sum)
-
 
 if __name__=='__main__':
-     
-    neg = [0,0,0,0,0,0,0,0,0,0,0,0,0]
-    neu = [0,0,0,0,0,0,0,0,0,0,0,0,0]
-    pos = [0,0,0,0,0,0,0,0,0,0,0,0,0]
-    for i in range(1,14):
-        if(i<10):
-            route = './week/0'+str(i)+'.txt'
-        else:
-            route = './week/'+str(i)+'.txt'
-        result = lstm_predict(route,i)
-        neg[i-1] = result[0]
-        neu[i-1] = result[1]
-        pos[i-1] = result[2]
     
-    print("negative",neg)
-    print("neural",neu)
-    print("positive",pos)  
-
-    #设置x,y轴
-    x = [x for x in range(1,14)]
-    #定义figure
-    plt.figure()
-    #分隔figure,3行3列
-    gs = gridspec.GridSpec(3, 3)
-    ax1 = plt.subplot(gs[0, :])
-    ax2 = plt.subplot(gs[1, :])
-    ax3 = plt.subplot(gs[2, :])
-    #绘制图像
-    ax1.plot(x, neg, color='red')
-    ax1.set_title('negative')
-    ax2.plot(x, neu, color='skyblue')
-    ax2.set_title('neural')
-    ax3.plot(x, pos, color='green')
-    ax3.set_title('positive')
-    plt.show()
-
-
-    plt.title('Result Analysis')
-    plt.plot(x, pos, color='green', label='positive')
-    plt.plot(x, neg, color='red', label='negative')
-    plt.plot(x, neu,  color='skyblue', label='neural')
-    plt.legend() # 显示图例
-    #plt.plot(x,y)
-    plt.xlabel("week(w)")#X轴标签
-    plt.ylabel("percent(%)")#Y轴标签 
-    plt.show()  
-
-
-
-    
+    string = './oneStudent/oneWeek.txt'
+    lstm_predict(string)       
