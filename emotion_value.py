@@ -2,9 +2,6 @@
 课前/课后/每周总结情感值*权重
 '''
 # -*- coding: utf-8 -*-
-import xlrd
-import numpy
-import matplotlib.pyplot as plt 
 
 #情感数组赋值
 def changeArr(a,b):

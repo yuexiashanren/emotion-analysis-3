@@ -88,4 +88,4 @@ name2 = "林雨钦"#m1702
 name3 = "赵华源"#m1703
 name4 = "徐海标"#m1704
 week = 13
-choiceAllText(name4,week)
+choiceAllText(name1,week)

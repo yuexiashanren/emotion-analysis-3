@@ -76,7 +76,8 @@ def input_transform(string):
     _,_,combined=create_dictionaries(model,words)
     return combined
 
-weekValue = [ 0 for i in range(3)]
+#weekValue = [ 0 for i in range(40)]
+weekValue = [ [0]*3 for i in range(13)]
 def lstm_predict(string):
     with open('../lstm_test/model/lstm.yml', 'r') as f:
         yaml_string = yaml.load(f)
@@ -91,6 +92,8 @@ def lstm_predict(string):
     now = 0
     with open(string ,'r', encoding='utf-8') as ff:
         for line in ff.readlines():
+            a = now//3#取整
+            b = now%3#取余
             data=input_transform(line)
             data.reshape(1,-1)
             #print data
@@ -99,15 +102,15 @@ def lstm_predict(string):
             print(now+1,choose)
             if choose==1:
                 pos += 1
-                weekValue[now] = 1
+                weekValue[a][b] = 1
                 now += 1
             elif choose==0:
                 neu += 1
-                weekValue[now] = 0
+                weekValue[a][b] = 0
                 now += 1
             else:
                 neg += 1
-                weekValue[now] = -1
+                weekValue[a][b] = -1
                 now += 1
     print("now",now)
     print("negative:",neg)
@@ -117,17 +120,32 @@ def lstm_predict(string):
     return weekValue
 
 if __name__=='__main__':
-    string = './oneStudent/oneWeek.txt'
+    string = './oneStudent/oneStu_allWeek.txt'
+    #获取周情感值
     weekValue = lstm_predict(string)
+    #课前、课后、每周总结权重赋值
     weight = [1,1.5,2]
-    def addWeight(weight,arr):
-        arrLen = len(arr)
-        emoValue = arr[0]*weight[0]+arr[1]*weight[1]+arr[2]*weight[2]
-        '''
-        emoValue = [ 0 for i in range(arrLen)]
-        for i in range(arrLen):
-            emoValue[i] = arr[0]*weight[0]+arr[1]*weight[1]+arr[2]*weight[2]
-        '''
+    #难度标记
+    dif = [[2,2],[3,2],[3,3],[3,2],[2,1],[1,1],
+            [1,2],[1,2],[1,1],[3,2],[2,1],[1,3],[3,2]]
+    #定义难度权值
+    difWeight = [0.5,1,1.5]
+    def changeDif(dif,difWeight):
+        for i in range(len(dif)):
+            for j in range(len(dif[0])):
+                if dif[i][j] == 1:
+                    dif[i][j] = difWeight[0]
+                elif dif[i][j] == 2:
+                    dif[i][j] = difWeight[1]
+                else:
+                    dif[i][j] = difWeight[2]
+    #难度标记数组=》难度权重数组
+    changeDif(dif,difWeight)
+    print("weekValue:",weekValue)
+    #最终情感值=课前*权重*难度+课后*权重*难度+每周*权重
+    def returnValue(weekValue,weight,dif):
+        emoValue = [ 0 for i in range(13)]
+        for i in range(13):
+            emoValue[i] = weekValue[i][0]*weight[0]*dif[i][0]+weekValue[i][1]*weight[1]*dif[i][1]+weekValue[i][2]*weight[2]
         return emoValue
-    print("result",addWeight(weight,weekValue))
-
+    print("emoValue:",returnValue(weekValue,weight,dif))
