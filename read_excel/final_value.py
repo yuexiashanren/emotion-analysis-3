@@ -1,7 +1,8 @@
 #! /bin/env python
 # -*- coding: utf-8 -*-
 """
-输出某个同学第几周的最终情感值
+oneStudent/oneStu_allWeek.txt中文本的最终情感值
+即输出某个同学整个学习过程的最终情感值
 """
 import jieba
 import numpy as np

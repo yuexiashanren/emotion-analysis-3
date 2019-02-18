@@ -32,6 +32,7 @@ print ("每周总结总行/列数",nrows3,ncols3)
 f0 = open('./oneStudent/oneStu_allWeek.txt', 'w', encoding='utf-8')
 #筛选同学X在n周内的所有课前、课后和每周总结评论，空的补“null”
 def choiceAllText(name,week):
+	print("学生姓名：",name)
 	for k in range(1,week+1):
 		flag1 = "false"
 		flag2 = "false"

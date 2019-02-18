@@ -1,3 +1,6 @@
+'''
+计算模型的召回率
+'''
 import pandas as pd 
 import numpy as np 
 import jieba
