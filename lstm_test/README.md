@@ -21,9 +21,9 @@ Test score: 0.7429023111783541
 Test accuracy: 0.7046153847987835
 
 lstm_test.py：测试
-negative: 2
-neural 20
-positive 8
-negative/sum: 6.67%
-neural/sum: 66.67%
-positive/sum: 26.67%
+negative: 4
+neural 19
+positive 7
+negative/sum: 13.33%
+neural/sum: 63.33%
+positive/sum: 23.33%
