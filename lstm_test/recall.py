@@ -16,7 +16,7 @@ sys.setrecursionlimit(1000000)
 
 # 定义参数
 maxlen = 100
-'''
+
 def loadfile():
     neg=pd.read_csv('../data/neg.csv',header=None,index_col=None,error_bad_lines=False)
     pos=pd.read_csv('../data/pos.csv',header=None,index_col=None,error_bad_lines=False)
@@ -32,6 +32,7 @@ def loadfile():
 #数据集的实际标签写入y.txt文档
 combined,y=loadfile()
 f1 = open('./recallData/combined.txt', 'w', encoding='utf-8')
+
 f2 = open('./recallData/y.txt', 'w', encoding='utf-8')
 for line in combined:   
     f1.write(str(line))
@@ -41,8 +42,7 @@ for line in y:
     f2.write(str(line))
     f2.write('\n')
 f2.close()
-'''
-'''
+
 #数据集的预测标签写入txt文档
 def create_dictionaries(model=None,
                         combined=None):
@@ -81,8 +81,8 @@ def input_transform(string):
     model=Word2Vec.load('../model/Word2vec_model.pkl')
     _,_,combined=create_dictionaries(model,words)
     return combined
-f3 = open('./recallData/y_pre.txt', 'w', encoding='utf-8')
 
+f3 = open('./recallData/y_pre.txt', 'w', encoding='utf-8')
 def lstm_predict(string):
     #print ('loading model...')
     with open('../model/lstm.yml', 'r') as f:
@@ -149,6 +149,7 @@ print("y_true",y_true)
 print("y_pred",y_pred)
 r = recall_score(y_true, y_pred, average='macro')   
 print(r)
+'''
 '''
 recall_score(y_true, y_pred, average='micro')   
 recall_score(y_true, y_pred, average='weighted')   

@@ -44,7 +44,7 @@ vocab_dim = 100 #词向量训练特征向量维度
 n_iterations = 5  # 词向量训练迭代次数
 n_exposures = 5 # 词向量训练最小词频
 window_size = 5 #词向量训练当前词与预测词在一个句子中的最大距离
-n_epoch = 7  #训练次数
+n_epoch = 10  #训练次数
 input_length = 100
 maxlen = 100 #文本保留的最大长度
 
