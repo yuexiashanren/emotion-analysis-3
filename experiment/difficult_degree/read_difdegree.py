@@ -237,10 +237,10 @@ x = [x for x in range(1,14)]
 plt.figure()
 
 plt.title('Result Analysis')
-plt.plot(x, classBefore, color='green')
-plt.plot(x, classBefore, 'g^', label='class_before')
-plt.plot(x, classAfter, color='red')
-plt.plot(x, classAfter, 'rd', label='class_after')
+#plt.plot(x, classBefore, color='green')
+plt.plot(x, classBefore, 'g^-', label='class_before')
+#plt.plot(x, classAfter, color='red')
+plt.plot(x, classAfter, 'rd-', label='class_after')
 #plt.plot(x, week_rate, color='red')
 #plt.plot(x, week_rate, 'r*', label='average')
 plt.legend() # 显示图例

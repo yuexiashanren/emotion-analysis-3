@@ -17,6 +17,16 @@ sys.setrecursionlimit(1000000)
 # 定义参数
 maxlen = 100
 
+jieba.load_userdict('../data/introductions.txt')
+jieba.load_userdict('../data/emotions.txt')
+jieba.load_userdict('../experiment/knowledge_content/units/unit1.txt')
+jieba.load_userdict('../experiment/knowledge_content/units/unit2.txt')
+jieba.load_userdict('../experiment/knowledge_content/units/unit3.txt')
+jieba.load_userdict('../experiment/knowledge_content/units/unit4.txt')
+jieba.load_userdict('../experiment/knowledge_content/units/unit5.txt')
+jieba.load_userdict('../experiment/knowledge_content/units/unit6.txt')
+jieba.load_userdict('../experiment/knowledge_content/units/unit7.txt')
+'''
 def loadfile():
     neg=pd.read_csv('../data/neg.csv',header=None,index_col=None,error_bad_lines=False)
     pos=pd.read_csv('../data/pos.csv',header=None,index_col=None,error_bad_lines=False)
@@ -42,7 +52,7 @@ for line in y:
     f2.write(str(line))
     f2.write('\n')
 f2.close()
-
+'''
 #数据集的预测标签写入txt文档
 def create_dictionaries(model=None,
                         combined=None):
@@ -76,6 +86,15 @@ def loadStopWords():
 
 def input_transform(string):
     words=jieba.lcut(string)
+    '''
+    stopWords = loadStopWords()
+    leftWords = []
+    for i in words:
+        if(i not in stopWords):
+            leftWords.append(i)
+    text_str = leftWords
+    words=np.array(text_str).reshape(1,-1)
+    '''
     words=np.array(words).reshape(1,-1)
     #载入模型
     model=Word2Vec.load('../model/Word2vec_model.pkl')
@@ -132,24 +151,7 @@ if __name__=='__main__':
     
     string = './recallData/combined.txt'
     lstm_predict(string)
-'''
-#实际与预测比较
-from sklearn.metrics import recall_score  
 
-def loadY():   
-    y = [line.strip()  for line in open('./recallData/y.txt', 'r', encoding='utf-8').readlines() ]   
-    return y
-def loadYPre():   
-    y_pred = [line.strip()  for line in open('./recallData/y_pre.txt', 'r', encoding='utf-8').readlines() ]   
-    return y_pred
-
-y_true = loadY()  
-y_pred = loadYPre()
-print("y_true",y_true)
-print("y_pred",y_pred)
-r = recall_score(y_true, y_pred, average='macro')   
-print(r)
-'''
 '''
 recall_score(y_true, y_pred, average='micro')   
 recall_score(y_true, y_pred, average='weighted')   

@@ -33,12 +33,12 @@ if __name__=='__main__':
     #定义figure
     plt.figure()
     plt.title('Result Analysis')
-    plt.plot(x, emo2, color='green', label='stu_A')
-    plt.plot(x, emo2, 'gs')
-    plt.plot(x, emo3, color='red', label='stu_B')
-    plt.plot(x, emo3, 'r*')
-    plt.plot(x, emo4,  color='blue', label='stu_C')
-    plt.plot(x, emo4, 'bd')
+    #plt.plot(x, emo2, color='green')
+    plt.plot(x, emo2, 'gs-', label='stu_A')
+    #plt.plot(x, emo3, color='red')
+    plt.plot(x, emo3, 'r*-', label='stu_B')
+    #plt.plot(x, emo4,  color='blue')
+    plt.plot(x, emo4, 'bd-', label='stu_C')
     plt.legend() # 显示图例
     #plt.plot(x,y)
     plt.xlabel("week")#X轴标签
