@@ -84,9 +84,13 @@ def choiceAllText(name,week):
 			f0.write("null")
 			f0.write('\n')
 
-name1 = "孟涵"#m1701
+name1 = "文习尚"#m1701
 name2 = "林雨钦"#m1702
 name3 = "赵华源"#m1703
 name4 = "徐海标"#m1704
+name5 = "李宵"
+name6 = "朱智"
+name7 = "刘晓稳"
+name8 = "朱浩杰"
 week = 13
-choiceAllText(name1,week)
+choiceAllText(name7,week)

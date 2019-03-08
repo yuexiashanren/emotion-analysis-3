@@ -44,7 +44,7 @@ vocab_dim = 100 #词向量训练特征向量维度
 n_iterations = 5  # 词向量训练迭代次数
 n_exposures = 5 # 词向量训练最小词频
 window_size = 5 #词向量训练当前词与预测词在一个句子中的最大距离
-n_epoch = 10  #训练次数
+n_epoch = 6  #训练次数
 input_length = 100
 maxlen = 100 #文本保留的最大长度
 
@@ -139,7 +139,8 @@ def word2vec_train(combined):
                      min_count=n_exposures, #最小词频，小于该次数的单词被丢弃，默认5
                      window=window_size, #当前词与预测词在一个句子中的最大距离
                      workers=cpu_count, #参数训练的并行数
-                     iter=n_iterations) #迭代次数，默认5
+                     iter=n_iterations, #迭代次数，默认5
+                     sg=0) #训练算法，0表示CBOW,1表示skip-gram
     #录入列表
     model.build_vocab(combined) # input: list
     #模型训练
@@ -185,9 +186,11 @@ def train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test):
                         input_length=input_length))  # 输入序列的长度
     #添加LSTM层,内部投影的维数和最终输出的维数为50，激活函数tanh
     #model.add(LSTM(units=50, activation='tanh')) 
+    
     #Bidirectional包装器（双向RNN包装器）
     #return_sequences：控制hidden_state,True输出全部，False（默认）输出最后一个
     #LSTM的网络结构中，直接根据当前input数据，得到的输出称为hidden state
+    #添加Bi-LSTM层
     model.add(Bidirectional(LSTM(units=50, return_sequences=True)))
     model.add(Bidirectional(LSTM(units=50, return_sequences=False)))
     
@@ -203,7 +206,7 @@ def train_lstm(n_symbols,embedding_weights,x_train,y_train,x_test,y_test):
 #                  activation='tanh',
 #                  unroll=True,
 #                  ))
-
+    
     #模型训练时随机让网络某些隐含层节点50%的权重不工作，避免过拟合（防止训练和测试数据的结果差别大，即提供模型的泛化能力）
     model.add(Dropout(0.5))
     #Dense=>全连接层,输出维度=3（三分类，输出维度为3，sigmoid）

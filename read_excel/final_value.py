@@ -125,7 +125,7 @@ if __name__=='__main__':
     #获取周情感值
     weekValue = lstm_predict(string)
     #课前、课后、每周总结权重赋值
-    weight = [1,1.5,2]
+    weight = [1,2.8,3.7]
     #难度标记
     dif = [[2,2],[3,2],[3,3],[3,2],[2,1],[1,1],
             [1,2],[1,2],[1,1],[3,2],[2,1],[1,3],[3,2]]
@@ -147,6 +147,6 @@ if __name__=='__main__':
     def returnValue(weekValue,weight,dif):
         emoValue = [ 0 for i in range(13)]
         for i in range(13):
-            emoValue[i] = weekValue[i][0]*weight[0]*dif[i][0]+weekValue[i][1]*weight[1]*dif[i][1]+weekValue[i][2]*weight[2]
+            emoValue[i] = float('{:.2f}'.format(weekValue[i][0]*weight[0]*dif[i][0]+weekValue[i][1]*weight[1]*dif[i][1]+weekValue[i][2]*weight[2]))
         return emoValue
     print("emoValue:",returnValue(weekValue,weight,dif))
