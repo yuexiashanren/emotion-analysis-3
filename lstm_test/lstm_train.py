@@ -44,7 +44,7 @@ vocab_dim = 100 #词向量训练特征向量维度
 n_iterations = 5  # 词向量训练迭代次数
 n_exposures = 5 # 词向量训练最小词频
 window_size = 5 #词向量训练当前词与预测词在一个句子中的最大距离
-n_epoch = 6  #训练次数
+n_epoch = 1  #训练次数
 input_length = 100
 maxlen = 100 #文本保留的最大长度
 
@@ -147,11 +147,11 @@ def word2vec_train(combined):
     model.train(combined,total_examples=model.corpus_count,epochs=model.iter)
     #模型保存（语料的索引及词向量）
     model.save('./model/Word2vec_model.pkl')
-    #每个词语的索引字典{单词：索引数字}##21088##、
-    #词向量字典{单词：词向量（100维长的数组）}##21088##、
-    #每个句子所对应的向量100维##总数据=21088*100##
+    #每个词语的索引字典{单词：索引数字}##1575##、
+    #词向量字典{单词：词向量（100维长的数组）}##1575##、
+    #每个句子所对应的向量100维##总数据=6498*100##
     index_dict, word_vectors,combined = create_dictionaries(model=model,combined=combined)
-
+    
     return   index_dict, word_vectors,combined
 
 
@@ -259,7 +259,12 @@ for line in combined:
 f1.close()
 print ('训练Word2vec模型...')
 index_dict, word_vectors,combined=word2vec_train(combined)
-
+print("Word2vec_index_dict:",len(index_dict))
+print("Word2vec_index_dict:",index_dict)
+print("Word2vec_word_vectors:",len(word_vectors))
+print("Word2vec_word_vectors:",word_vectors)
+print("Word2vec_combined:",combined.shape)
+print("Word2vec_combined:",combined)
 print ('获取网络参数...')
 n_symbols,embedding_weights,x_train,y_train,x_test,y_test=get_data(index_dict, word_vectors,combined,y)
 

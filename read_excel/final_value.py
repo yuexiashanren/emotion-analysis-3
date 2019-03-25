@@ -125,12 +125,12 @@ if __name__=='__main__':
     #获取周情感值
     weekValue = lstm_predict(string)
     #课前、课后、每周总结权重赋值
-    weight = [1,2.8,3.7]
+    weight = [0.2,0.5,0.3]
     #难度标记
     dif = [[2,2],[3,2],[3,3],[3,2],[2,1],[1,1],
             [1,2],[1,2],[1,1],[3,2],[2,1],[1,3],[3,2]]
     #定义难度权值
-    difWeight = [0.5,1,1.5]
+    difWeight = [0.17,0.33,0.5]
     def changeDif(dif,difWeight):
         for i in range(len(dif)):
             for j in range(len(dif[0])):

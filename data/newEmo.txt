@@ -1,0 +1,291 @@
+计算机导论           Introduction to Computer Science
+高等数学              Advanced Mathematics
+应用创造学           Creativity Methodology
+工程图学与计算机绘图              Engineering Graphics and Computer Graphics Drawings
+面向对象程序设计              Object-oriented Programming
+概率论与数理统计              Probability Theory and Statistics
+离散数学              Discrete Mathematics
+软件工程概论              Introduction to Software Engineering
+数据结构              Data Structures
+计算机组成与结构              Computer Organization and Architecture
+操作系统              Operating System
+计算机网络           Computer Network
+算法设计与分析           Algorithm Design and Analysis
+软件工程经济学           Software Engineering Economics
+Java技术              Java Technology
+UML建模             UML Modeling (Unified Modeling Language Modeling)
+数据库系统概论           Introduction to Database Systems
+编译原理              Principle of Compiler
+软件体系结构              Software Architecture
+程序分析              Program Analysis
+软件过程与项目管理           Software Process and Project Management
+系统分析与设计           System Analysis and Design
+程序测试              Program Testing
+模式识别       Pattern Recognition
+嵌入式程序设计    Embedded Programming
+人机交互技术              Human-computer Interaction Technology
+云计算           Cloud Computing
+计算机与网络安全              Computer and Network Security
+计算机图形学              Computer Graphics
+数据挖掘技术              Data Mining Technology
+分布对象技术              Distributed Object Technology
+网络多媒体           Internet Multimedia
+网络程序设计              Network Programming
+.NET程序设计             . NET Programming Design
+协议工程              Protocol Engineering
+5.4.2          操作系统相关术语
+虚拟机           Virtual Machine
+访问控制列表              Access Control List
+线程             Thread
+多线程           Multithreading
+进程              Process
+守护进程             Daemon
+进程间通信           IPC (Interprocess Communication)
+死锁              Deadlock
+银行家算法           Banker’s  algorithm
+内存管理              Memory management
+虚拟地址              Virtual address
+物理地址              Physical address
+引导盘           Boot Disk
+页面失效              Page Fault
+后台进程/前台进程             Background Process /Foreground Process
+文件传送协议              FTP (File Transfer Protocol)
+图形用户界面              GUI (Graphical User Interface)
+权限              Permission
+移植              Port/Ported/Porting
+可移植系统接口          Portable Operating System Interface
+分时              Time-sharing
+工作区           Workspace
+工作目录             Working Directory
+窗口管理器           Window Manager
+封装器           Wrapper
+5.4.3          算法相关术语
+字典              Dictionaries
+堆           Heap
+优先级队列           Priority queue
+矩阵乘法              Matrix multiplication
+贪心算法              Greedy algorithm
+上界/下界             Upper bound / Lower bound
+最好情况/最坏情况/平均情况            Best case /Worst Case/ Average case
+插入排序             Insertion sort
+合并排序              Merge sort
+堆排序           Heap sort
+快速排序              Quick sort
+动态规划              DP (Dynamic Programming)
+背包问题              Knapsack problem
+霍夫曼编码          Huffman Coding
+迪杰斯特拉算法           Dijkstra’s algorithm
+贝尔曼-福德算法         Bellman-Ford algorithm
+弗洛伊德算法              Floyd-Warshall algorithm
+回溯              Back-Tracking
+N皇后问题           N-Queen problem
+渐进增长      Asymptotic growth(包含O-notationΩ-notation Θ-notation)
+线性规划              Linear programming
+随机数生成           Random number generation
+图的生成              Generating graphs
+图论-多项式算法         Graph Problems – polynomial algorithm      
+连通分支              Connected components
+最小生成树           Minimum Spanning Tree      
+最短路径              Shortest path
+NP问题         Non-Deterministic Polynomial problem
+旅行商问题           Traveling salesman problem
+同构              Graph isomorphism
+压缩              Text compression
+最长公共子串              Longest Common Substring
+最短公共父串              Shortest Common Superstring
+收敛速度              Rate of convergence  
+5.4.4          数据结构相关术语
+集合              Set Data Structures
+线性方程组           Linear Equations
+数据抽象             Data abstraction
+数据元素             Data element
+数据对象             Data object
+数据类型              Data type
+逻辑结构              Logical structure
+物理结构              Physical structure
+线性结构/非线性结构          Linear structure / Nonlinear structure
+线性表           Linear list
+栈           Stack
+队列              Queue
+串           String
+图          Graph
+插入              Insertion
+删除              Deletion
+前趋             Predecessor
+后继             Successor
+直接前趋             Immediate predecessor
+直接后继              Immediate successor
+双端列表              Double-ended queue
+循环队列              Circular queue
+指针      Pointer
+先进先出表（队列）           First-in first-out list
+后进先出表（队列）           Last-in first-out list
+栈底/栈顶             Bottom /Top
+压入/弹出             Push/ Pop
+队头/队尾             Front/ Rear
+上溢/下溢             Overflow/ Underflow
+数组              Array
+矩阵              Matrix
+多维数组              Multi-dimensional array
+以行为主/以列为主的顺序分配          Row major order / Column major order
+三角矩阵              Triangular matrix
+对称矩阵              Symmetric matrix
+稀疏矩阵              Sparse matrix
+转置矩阵              Transposed matrix
+链表              Linked list
+线性链表              Linear linked list
+单链表           Single linked list
+多重链表              Multilinked list
+循环链表              Circular linked list
+双向链表              Doubly linked list
+十字链表              Orthogonal list
+广义表           Generalized list
+指针域          Pointer field
+头结点           Head node
+头指针/尾指针             Head pointer/ Tail pointer
+空白串           Blank string
+空串（零串）Null string
+子串              Substring
+树           Tree
+子树              Subtree
+森林              Forest
+根           Root
+叶子              Leaf
+深度              Depth
+双亲/孩子/兄弟/祖先/子孙   Parents/ Children/ Brother/ Ancestor/ Descendant
+二叉树           Binary tree
+平衡二叉树           Balanced binary tree
+满二叉树              Full binary tree
+完全二叉树           Complete binary tree
+遍历二叉树          Traversing binary tree
+二叉排序树           Binary sort tree
+二叉查找树           Binary search tree
+线索二叉树           Threaded binary tree
+哈夫曼树              Huffman tree
+有序树/无序树             Ordered tree / Unordered tree
+判定树          Decision tree
+数字查找树           Digital search tree
+树的遍历              Traversal of tree
+先序遍历              Preorder traversal
+中序遍历              Inorder traversal
+后序遍历              Postorder traversal
+子图              Subgraph
+有向图/无向图             Digraph(directed graph)/Undigraph(undirected graph)
+完全图           Complete graph
+连通图           Connected graph
+非连通图              Unconnected graph
+强连通图              Strongly connected graph
+弱连通图              Weakly connected graph
+有向无环图           Directed acyclic graph
+重连通图              Biconnected graph
+二部图           Bipartite graph
+边           Edge
+顶点              Vertex
+连接点          Articulation point
+初始结点              Initial node
+终端结点              Terminal node
+相邻边           Adjacent edge
+相邻顶点              Adjacent vertex
+关联边           Incident edge
+入度/出度             In-degree/ Out-degree
+有序对/无序对             Ordered pair/ Unordered pair
+简单路径              Simple path
+简单回路              Simple cycle
+连通分量              Connected component
+邻接矩阵              Adjacency matrix
+邻接表           Adjacency list
+邻接多重表           Adjacency multi-list
+遍历图           Traversing graph
+生成树           Spanning tree
+拓扑排序              Topological sort
+偏序              Partial order
+AOV网          Activity On Vertex network
+AOE网          Activity On Edge network
+关键路径              Critical path
+线性查找（顺序查找）              Linear search (Sequential search)
+二分查找              Binary search
+分块查找              Block search
+散列查找              Hash search
+平均查找长度              Average search length
+散列表           Hash table
+散列函数              Hash function
+直接定址法           Immediately allocating method
+数字分析法           Digital analysis method
+平方取中法           Mid-square method
+随机数法       Random number method
+内部排序              Internal sort
+外部排序              External sort
+选择排序              Selection sort
+基数排序              Radix sort
+平衡归并排序              Balance merging sort
+二路平衡归并排序              Balance two-way merging sort
+多步归并排序              Ploy phase merging sort
+置换选择排序              Replacement selection sort
+索引文件              Indexed file
+索引顺序文件              Indexed sequential file
+索引非顺序文件           Indexed non-sequential file
+多重链表文件              Multi-list file
+倒排文件              Inverted file
+5.4.5          计算机网络相关术语
+端口              Port
+服务器           Server
+客户端           Client
+服务访问点           SAP (Service Access Point)
+开放系统互联              OSI (Open System Interconnection)
+物理层           Physical layer
+数据链路层           Data link layer
+网络层           Network layer
+运输层           Transport layer
+会话层           Session layer
+表示层           Presentation layer
+应用层           Application layer
+TCP/IP协议          TCP / IP protocol
+信道容量              Channel capacity
+香农              Shannon
+奈奎斯特              Nyquist
+双绞线           UTP (Unshielded Twisted Paired)
+同轴电缆              Coaxial cable
+光纤              Optical fiber
+不归零码              NRZ (Non Return to Zero)
+曼彻斯特编码              Manchester coding
+调制              Modulation
+脉码调制             PCM (Pulse Code Modulation)
+增量调制              DM (Delta Modulation)
+同步传输/异步传输             Synchronous transmission / ATM (Asynchronous transmission)
+循环冗余校验              CRC (Cyclic Redundancy Check)
+流量控制              Flow control
+滑动窗口              Sliding window
+差错控制              Error control
+帧结构           Frame structure
+复用              Reuse     
+非对称数字用户线路           ADSL (Asymmetric digital subscriber line)
+电路交换和分组交换           Circuit switching and packet switching
+频分多路复用              Frequency division multiplexing
+信令                     Signaling
+数据报                  Datagram
+虚电路                  Virtual circuit
+帧中继                  Frame relay   
+信元                     Ceil
+拥塞                     Congestion
+反压                     Back pressure
+令牌桶                  Token bucket
+环形/总线形/树形和星形结构            Ring/ bus/ tree and star structure        
+局域网                  LAN (local area network)
+集线器                  Hub
+交换机                  Switch
+路由器                  Router
+网桥                     Network bridge
+以太网监听算法           Ethernet listener algorithm
+子网掩码              Subnet mask
+三次握手              Three-way handshake
+地址解析协议              APP (Address resolution protocol)
+瘦客户机              Thin client
+网际控制报文协议              ICMP (Internet Control Message Protocol)
+因特网群组管理协议           IGMP (Internet Group Management Protocol)
+拒绝服务              Denial of service
+边界网关              Border gateway
+域名系统              DNS (Domain Name System)
+数据链路控制              DLC (Data Link Control)
+互联网电子邮件协议标准           POP (Post Office Protocol)
+远程控制              Remote control
+简单邮件传送协议              SMTP (Simple Mail Transport Protocol) 
