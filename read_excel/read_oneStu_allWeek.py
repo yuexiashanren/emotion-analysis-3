@@ -93,4 +93,4 @@ name6 = "朱智"
 name7 = "刘晓稳"
 name8 = "朱浩杰"
 week = 13
-choiceAllText(name3,week)
+choiceAllText(name4,week)
