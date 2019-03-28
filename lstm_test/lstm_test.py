@@ -73,7 +73,7 @@ def loadStopWords():
 def input_transform(string):
     words=jieba.lcut(string)
     #print("words",words)
-    print("jieba:",str(words))
+    #print("jieba:",str(words))
     stopWords = loadStopWords()
     leftWords = []
     for i in words:
@@ -81,7 +81,7 @@ def input_transform(string):
             leftWords.append(i)
     text_str = leftWords
     #print("text_str",text_str)
-    print("stop:",text_str)
+    #print("stop:",text_str)
     words=np.array(text_str).reshape(1,-1)
     #print("words1",words)
     #载入模型

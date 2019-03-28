@@ -149,4 +149,12 @@ if __name__=='__main__':
         for i in range(13):
             emoValue[i] = float('{:.2f}'.format(weekValue[i][0]*weight[0]*dif[i][0]+weekValue[i][1]*weight[1]*dif[i][1]+weekValue[i][2]*weight[2]))
         return emoValue
-    print("emoValue:",returnValue(weekValue,weight,dif))
+    emoValue = returnValue(weekValue,weight,dif)
+    finValue = [ 0 for i in range(13)]
+    for i in range(len(emoValue)):
+        if i == 0:
+            finValue[i] = float('{:.4f}'.format(emoValue[i]))
+        else:
+            finValue[i] = float('{:.4f}'.format(0.2*emoValue[i-1] + 0.8*emoValue[i]))
+    print("emoValue:",emoValue)
+    print("finValue:",finValue)

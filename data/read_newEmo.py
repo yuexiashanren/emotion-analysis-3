@@ -14,8 +14,8 @@ if __name__=='__main__':
 	print(len(newEmo))
 	for i in range(len(newEmo)):
 		word  =newEmo[i]
-		num = word.index(' ')
 		#通过索引切割
+		num = word.index(' ')
 		#print(word[:num])
 		newWord = word[:num]
 		print(newWord[0])
