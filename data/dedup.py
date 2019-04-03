@@ -19,7 +19,7 @@ if __name__=='__main__':
 		f_1.write(str(re_1[i]))
 		f_1.write('\n')
 	f_1.close()
-	'''
+	
 	#专业领域词典去重
 	need_2 = loadIntroWords()
 	f_2 = open('./introductions_.txt','w',encoding='utf-8')
@@ -37,4 +37,4 @@ if __name__=='__main__':
 		f_3.write(str(re_3[i]))
 		f_3.write('\n')
 	f_3.close()
-	'''
+	
