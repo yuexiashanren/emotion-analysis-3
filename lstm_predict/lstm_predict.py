@@ -5,8 +5,8 @@ from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential
 from keras.layers import LSTM, Dense, Activation
 
-
-def load_data(file_name, sequence_length=10, split=0.6):
+#split：训练比
+def load_data(file_name, sequence_length=10, split=0.8):
     df = pd.read_csv(file_name, sep=',', usecols=[1])
     data_all = np.array(df).astype(float)
     scaler = MinMaxScaler()
